@@ -5,25 +5,30 @@ const config: Config = {
 	theme: {
 		extend: {
 			colors: {
-				accent: '#2337ff',
-				'accent-dark': '#000d8a',
-				ink: 'rgb(15, 18, 25)',
-				fog: 'rgb(34, 41, 57)',
-				mist: 'rgb(96, 115, 159)',
-				cloud: 'rgb(229, 233, 240)',
+				accent: '#0ea5e9',
+				'accent-dark': '#0284c7',
+				ink: '#0f172a',
+				fog: '#1f2937',
+				mist: '#4b5563',
+				cloud: '#e2e8f0',
+				canvas: '#f8fafc',
 			},
 			fontFamily: {
 				sans: ['"Atkinson"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+				mono: [
+					'"JetBrains Mono"',
+					'"IBM Plex Mono"',
+					'ui-monospace',
+					'SFMono-Regular',
+					'Menlo',
+					'monospace',
+				],
 			},
 			boxShadow: {
-				soft:
-					'0 2px 6px rgba(96, 115, 159, 0.25), 0 8px 24px rgba(96, 115, 159, 0.33), 0 16px 32px rgba(96, 115, 159, 0.33)',
-			},
-			backgroundImage: {
-				'body-gradient': 'linear-gradient(rgba(229, 233, 240, 0.5), #ffffff)',
+				soft: '0 12px 32px rgba(15, 23, 42, 0.05)',
 			},
 			maxWidth: {
-				content: '720px',
+				content: '780px',
 			},
 		},
 	},

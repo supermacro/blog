@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import BaseHead from '../../components/BaseHead';
 import Footer from '../../components/Footer';
@@ -34,43 +33,27 @@ const currentPath = Astro.url.pathname;
 	<body>
 		<Header currentPath={currentPath} />
 		<main class="mx-auto w-full max-w-content px-4 py-16">
-			<section class="flex flex-col gap-10">
-				<header class="text-center">
-					<h1 class="text-4xl font-bold text-ink sm:text-5xl">Latest Posts</h1>
-					<p class="mt-4 text-lg text-fog">
-						Dive into news, tutorials, and tips from the Astro community.
+			<section class="space-y-12">
+				<header class="space-y-4">
+					<h1 class="text-4xl font-semibold text-ink sm:text-[3rem]">Archive</h1>
+					<p class="max-w-2xl text-base text-mist">
+						A running log of experiments, engineering notes, and field reports. Entries are ordered
+						with the most recent first.
 					</p>
 				</header>
-				<ul class="grid list-none gap-8 p-0 sm:grid-cols-2">
-					{posts.map((post, index) => (
-						<li
-							class={`group ${index === 0 ? 'sm:col-span-2' : ''}`}
-							key={post.id}
-						>
-							<a
-								href={`/blog/${post.id}/`}
-								class="flex h-full flex-col overflow-hidden rounded-3xl bg-white/80 shadow-soft transition-shadow hover:shadow-lg"
-							>
-								{post.data.heroImage && (
-									<Image
-										class="h-52 w-full object-cover sm:h-64"
-										width={720}
-										height={360}
-										src={post.data.heroImage}
-										alt={post.data.title}
-									/>
-								)}
-								<div class="flex flex-1 flex-col gap-3 p-6">
-									<p class="text-sm font-medium uppercase tracking-wide text-mist">
-										<FormattedDate date={post.data.pubDate} />
-									</p>
-									<h4 class={`text-2xl font-semibold text-ink transition-colors group-hover:text-accent ${index === 0 ? 'sm:text-3xl' : ''}`}>
-										{post.data.title}
-									</h4>
-									<p class="text-base text-fog">
-										{post.data.description}
-									</p>
+				<ul class="divide-y divide-cloud/70 border border-cloud/70 bg-white/60">
+					{posts.map((post) => (
+						<li class="group px-4 py-5 transition-colors hover:bg-cloud/40" key={post.id}>
+							<a href={`/blog/${post.id}/`} class="flex flex-col gap-2 text-inherit no-underline">
+								<div class="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-mist/60">
+									<FormattedDate date={post.data.pubDate} />
 								</div>
+								<h2 class="text-2xl font-semibold text-ink transition-colors group-hover:text-accent">
+									{post.data.title}
+								</h2>
+								<p class="text-sm text-mist">
+									{post.data.description}
+								</p>
 							</a>
 						</li>
 					))}

@@ -1,63 +1,84 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+import { SITE_TITLE } from '../consts';
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
+const pageUrl = Astro.url.toString();
+const rssUrl = new URL('rss.xml', Astro.site).toString();
+const sitemapUrl = new URL('sitemap-index.xml', Astro.site).toString();
+const generator = Astro.generator;
+const currentPath = Astro.url.pathname;
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage={AboutHeroImage}
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
-
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
-
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
-
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
-
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead
+			title={`About · ${SITE_TITLE}`}
+			description="Giorgio - what I'm working on and what I care about."
+			canonicalUrl={canonicalUrl}
+			pageUrl={pageUrl}
+			rssUrl={rssUrl}
+			sitemapUrl={sitemapUrl}
+			generator={generator}
+		/>
+	</head>
+	<body>
+		<Header currentPath={currentPath} />
+		<main class="mx-auto w-full max-w-content px-4 py-16">
+			<article class="space-y-10 font-mono text-[1.02rem] leading-[1.9] text-fog">
+				<header class="space-y-2">
+					<h1 class="text-[3rem] font-semibold text-ink">About</h1>
+				</header>
+				<p>
+					Hi 👋! My name's Giorgio, but most people call me Gio. I studied Economics at Wilfrid Laurier
+					University, taught myself how to write software, and co-founded a company while I was still
+					in school. In 2016 I joined the <a class="text-accent transition-colors hover:text-accent-dark" href="https://www.nextcanada.com/next-36/">Next 36</a> program, which kicked off a deep focus on building
+					systems and teams.
+				</p>
+				<p>
+					The startup didn't make it, but the experience cemented that software is where I want to
+					spend my time. From 2016 to 2020 I worked as a full stack engineer at <a class="text-accent transition-colors hover:text-accent-dark" href="https://setter.com/">Setter</a>, helping to scale a
+					service company into a product-led organization.
+				</p>
+				<p>
+					Along the way I built <a class="text-accent transition-colors hover:text-accent-dark" href="https://github.com/parlez-vous/">ParlezVous</a>, a side project written in Elm that rekindled my love for
+					functional programming and small, focused tools. Elm remains one of my favorite languages
+					for thinking clearly about state.</p>
+				<p>
+					Today I'm the technical lead and founding engineer at <a class="text-accent transition-colors hover:text-accent-dark" href="https://www.caribouwealth.com/">Caribou</a>, where I work on the
+					systems that help people understand and act on their financial futures.
+				</p>
+				<section class="space-y-4">
+					<h2 class="text-sm uppercase tracking-[0.3em] text-mist/70">Links I find myself sharing</h2>
+					<ul class="grid gap-2 text-sm text-mist">
+						<li><a class="text-accent transition-colors hover:text-accent-dark" href="https://www.reddit.com/r/technology/comments/85eri3/edward_snowden_facebook_is_a_surveillance_company/">Facebook is a surveillance company</a></li>
+						<li><a class="text-accent transition-colors hover:text-accent-dark" href="https://edge.org/response-detail/11783">Kayfabe</a></li>
+						<li><a class="text-accent transition-colors hover:text-accent-dark" href="http://www.thrivenotes.com/the-last-answer/">The Last Answer</a></li>
+						<li><a class="text-accent transition-colors hover:text-accent-dark" href="http://galactanet.com/oneoff/theegg_mod.html">The Egg</a></li>
+						<li><a class="text-accent transition-colors hover:text-accent-dark" href="http://paulgraham.com/love.html">Love — Paul Graham</a></li>
+						<li><a class="text-accent transition-colors hover:text-accent-dark" href="http://www.paulgraham.com/avg.html">Beating the Averages</a></li>
+						<li><a class="text-accent transition-colors hover:text-accent-dark" href="http://www.thoughtcrime.org/blog/career-advice/">Career Advice</a></li>
+						<li><a class="text-accent transition-colors hover:text-accent-dark" href="http://sivers.org/kimo">There's No Speed Limit</a></li>
+						<li><a class="text-accent transition-colors hover:text-accent-dark" href="http://www.jasq.org/just-another-scala-quant/inverting-binary-trees-considered-harmful">On new age tech interview trends</a></li>
+						<li><a class="text-accent transition-colors hover:text-accent-dark" href="https://www.brainpickings.org/2015/10/13/john-steinbeck-letters-to-elizabeth-dream/?mc_cid=23a7c01a76&mc_eid=ec41677af4">The Death of Creative Culture</a></li>
+						<li><a class="text-accent transition-colors hover:text-accent-dark" href="http://herpolhode.com/rob/utah2000.pdf">OS Research is Irrelevant</a></li>
+						<li><a class="text-accent transition-colors hover:text-accent-dark" href="http://playbook.samaltman.com/">Startup Playbook</a></li>
+						<li><a class="text-accent transition-colors hover:text-accent-dark" href="http://www.skyhunter.com/marcs/GentleSeduction.html">The Gentle Seduction</a></li>
+						<li><a class="text-accent transition-colors hover:text-accent-dark" href="http://norvig.com/21-days.html">Teach Yourself Programming in Ten Years</a></li>
+					</ul>
+				</section>
+				<blockquote class="border-l-2 border-accent/70 pl-4 text-sm text-mist">
+					Just as there are odors that dogs can smell and we cannot, as well as sounds that dogs can
+					hear and we cannot, so too there are wavelengths of light we cannot see and flavors we cannot
+					taste. Why then, given our brains wired the way they are, does the remark, “Perhaps there are
+					thoughts we cannot think,” surprise you? —
+					<a class="text-accent transition-colors hover:text-accent-dark" href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004020">Richard Hamming</a>
+				</blockquote>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>

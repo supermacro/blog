@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead';
 import Footer from '../components/Footer';
@@ -34,34 +33,35 @@ const currentPath = Astro.url.pathname;
 	<body>
 		<Header currentPath={currentPath} />
 		<main class="mx-auto w-full max-w-content px-4 py-16">
-			<article class="flex flex-col gap-10">
-				{heroImage && (
-					<Image
-						class="h-auto w-full rounded-3xl shadow-soft"
-						width={1020}
-						height={510}
-						src={heroImage}
-						alt={`Hero image for ${title}`}
-					/>
-				)}
-				<header class="flex flex-col items-center gap-4 text-center">
-					<div class="text-sm font-medium uppercase tracking-wide text-mist">
+			<article class="flex flex-col gap-12">
+				<header class="space-y-6">
+					<nav class="text-xs uppercase tracking-[0.3em] text-mist/60">
+						<a href="/blog" class="text-mist/70 transition-colors hover:text-accent">&larr; Archive</a>
+					</nav>
+					<div class="space-y-3">
+						<h1 class="text-4xl font-semibold text-ink sm:text-[3.25rem]">{title}</h1>
+						<p class="text-base text-mist">{description}</p>
+					</div>
+					<div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-mist/70">
 						<FormattedDate date={pubDate} />
 						{updatedDate && (
-							<span class="ml-2 italic text-mist">
-								• Last updated on <FormattedDate date={updatedDate} />
+							<span class="text-mist/50">
+								· Updated <FormattedDate date={updatedDate} />
 							</span>
 						)}
 					</div>
-					<h1 class="text-4xl font-bold text-ink sm:text-5xl">{title}</h1>
-					<p class="max-w-2xl text-lg text-fog">{description}</p>
-					<hr class="w-24 border-t-2 border-accent/40" />
+					{heroImage && (
+						<img
+							class="mt-6 w-full rounded-xl border border-cloud/70"
+							src={heroImage.src}
+							alt={`Illustration for ${title}`}
+						/>
+					)}
 				</header>
-				<div class="space-y-6 text-lg leading-relaxed text-fog">
+				<div class="space-y-6 font-mono text-[1.02rem] leading-[1.9] text-fog">
 					<slot />
 				</div>
-			</article>
-		</main>
+			</main>
 		<Footer />
 	</body>
 </html>
