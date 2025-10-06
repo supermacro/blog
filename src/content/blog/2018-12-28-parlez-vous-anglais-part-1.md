@@ -1,0 +1,179 @@
+---
+title: "Parlez-Vous Anglais? (Part 1)"
+description: "Table Of Contents"
+pubDate: "2018-12-28"
+---
+
+# Table Of Contents
+
+- tldr
+- Background
+- Part 1:
+    - Arriving at a name
+    - Thinking about the tech stack
+
+
+---
+## tldr
+
+- New side project called parlez-vous ([website](https://parlez-vous.io))
+- Server coded in TypeScript but will eventually be ported to Rust
+    - [Source code](https://github.com/parlez-vous/server)
+- Landing Page is a webapp
+    - [Source code](https://github.com/parlez-vous/site)
+    - Written in Elm
+    - Will be an admin panel for domain owners
+    - Might evolve into more!
+- Embeddable widget will probably be written in Preact because it needs to be as small as possible
+- I hint at a set of upcoming technical posts describing the architecture and design of the three aforementioned parts of Parlez-Vous
+
+---
+
+## Background
+
+In my [last blog post]({filename}2018-10-06-overengineered.md), I mentioned how I had been thinking about adding a comment system to my blog. Since this is a static website, I do not have a server available to create an endpoint to handle comments.
+
+> For context, a comment system is a service that hosts comments for you. Comment systems are valuable to websites because they encourage engagement with your content and increase user retention.
+
+[Disqus](https://disqus.com/) is the industry-leader in this field. However, its revenue model (selling your data to marketers) does not vibe well with me. Its [acquisition](https://techcrunch.com/2017/12/05/zeta-global-acquires-commenting-service-disqus/) will fuel further aggressive data hoarding and auctioning. No thanks!
+
+So I began searching for morally-responsible options, and found several: 
+
+- [StaticMan](https://staticman.net/)
+- [Commento](https://commento.io/)
+- [Remarkbox](https://www.remarkbox.com/)
+
+Of the three, Commento seemed to be the most likely candidate. But one day I stopped and said to myself, "why don't I just make my own embeddable comment system?"
+
+## Part 1: My Journey Into Comment Systems
+
+I've been wanting to create a product from scratch for some time now. The issue is that I've been searching for something at the intersection of simple, but interesting.
+
+A comment system is simple enough so as to not be a project out of my technical reach, yet is interesting enough to keep me motivated to continue working on it. 
+
+As a startup-obsessed person, I always have these wild ideas about extraordinary companies that solve immense problems, but I fail to envision the first version - that initial kernel that snowballs into a final grandiose company.
+
+A comment system, to me, has that feel of the tiny kernel that can evolve into a solution to a (yet unknown) large problem!
+
+But alas, my main goal is to learn. All else is peripheral.
+
+
+### Arriving at a Name
+
+Being bilingual (with a basic understanding of French, Portuguese, and Italian) has always helped me expand my vocabulary in an english context. One day, the name Parlez-Vous popped into my head and I immediately knew that this would be the name of the product. 
+
+> "Parlez-Vous" is French for "Do you speak"
+
+
+### Thinking About the Tech Stack
+
+Like I mentioned, my main goal was, and continues to be, to learn. There are two main objectives I want to achieve throughout this project; I want go gain more exposure to devops (managing a server, configuring firewalls, setting up a reverse proxy server, etc), and continue to gain further intuition and appreciation for functional programming.
+
+I figured out early on that there would be three core pieces in a comment system:
+
+- The comment server
+- The landing page and web application
+- The embeddable comment widget
+
+What follows is a quick overview of their purpose.
+
+#### The Comment Server
+
+You can find the source code for the server [here](https://github.com/parlez-vous/server).
+
+I knew the database was going to be PostgreSQL. It's the database I'm most comfortable with and as a fan of type systems, Postgres is a no-brainer.
+
+The server itself will be hosted on [Digital Ocean](https://m.do.co/c/38e4c23744b2) primarily because of how simple it is relative to Google Cloud or AWS. The community, tutorials and UI on Digital Ocean make learning devops a lot less intimidating.
+
+The programming language of choice was the big question mark for me.
+
+I began working on this server in Rust, but decided after a few days that the rate of progress was way too slow. There's still quite a lot that my brain struggles to understand. The combination of:
+
+- low-level language concepts (such as mutexes, smart pointers, etc...)
+- the borrow checker
+- traits / type classes
+
+Was too much to take in *while* thinking about the architecture of a comment web server. So I decided that v1 of parlez-vous' server would be written in TypeScript.
+
+Once I ship v1 of the entire software suite (the server, web app and embeddable widget), I'll begin work on porting the TypeScript server to Rust. Hopefully by then the documentation on Futures will make more sense to me!
+
+**Work remaining:**
+
+- Set up a reverse proxy (nginx probably)
+- Set up a server on a private network - only accessible through reverse proxy
+    - set up SSL cert
+- Set up CI / CD for https://api.parlez-vous.io
+- Add missing api endpoints
+    - sign in
+    - sign up
+- Perform periodic server-side DNS lookups to prove you own a domain
+
+Estimate: End of January
+
+
+---
+
+
+#### Landing Page and Web App
+
+You can find the source code for the landing page [here](https://github.com/parlez-vous/site).
+
+This has been the funnest part so far. Elm is awesome. And the new 0.19 version is, in my opinion, a lot simpler. I recall struggling to create HTTP requests in version 0.18. There was a lot of ceremony back then. Now it's quite simple!
+
+The goal of the web app, at least for v1, is to enable website owners to register their website so that they may enable the comment widget to work on their domain.
+
+There's also the potential to enable site admins to customize the look and feel of their widget to better fit with their brand.
+
+I've been thinking a lot of how the webapp could also become a system to create further user engagement for each website owner. This is still very fuzzy in my head, so don't ask me about details right now!
+
+Setting up CI / CD for the landing page was really easy. I'm using [Netlify](https://www.netlify.com/) which is **amazing**. I couldn't recommend it enough. Every new commit pushed to github on the `production` branch will trigger a deploy to https://parlez-vous.io, and every new commit pushed to github on the `master` branch will trigger a deploy to a staging site located at: https://master--adoring-banach-15797c.netlify.com/ 
+
+
+**Work remaining:**
+
+- Add routing
+    - admin page
+
+Estimate: End of January
+
+
+---
+
+
+#### Embeddable Widget
+
+I saw that Commento's embeddable widget stands at 12KB minified + gzipped. Goal #1: Ensure parlez-vous' widget is < 12KB minified + gzipped 🙃
+
+This probably means using [Preact](https://preactjs.com/).
+
+Another goal of parlez-vous in general will be to enable conversations without the need to sign up. Signing up before commenting creates friction and reduces engagement. In my opinion, the user journey begins with curiosity, and curiosity is very brittle. Forcing someone to sign up to make comments using a product they've probably never heard of is a very tough sell. Let the product sell itself over time, and deliver more features to those users who do decide to sign up.
+
+I know this is all quite abstract right now but I think if I let these ideas percolate, they'll transform into concrete features.
+
+
+**Work remaining:**
+
+- Build the thing
+
+Estimate: End of February
+
+---
+
+
+## Until Part 2
+
+Part 2 will begin a deep-dive into the architecture and design decisions for each of the three main pieces in the Parlez-Vous system:
+
+- The comment server
+- The landing page / webapp
+- The embeddable widget
+
+Each component will have a dedicated blog post to make things a little more digestible and focused.
+
+I should have a post ready by end of January.
+
+Adios!
+
+---
+
+*This post was edited on Dec 29. You can view the revision history of this post [here](https://github.com/gDelgado14/personal-site/commits/master/content/posts/2018-12-28-parlez-pt1.md)*
