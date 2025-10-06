@@ -1,111 +1,79 @@
 ---
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
-import BaseHead from '../../components/BaseHead.astro';
-import Footer from '../../components/Footer.astro';
-import FormattedDate from '../../components/FormattedDate.astro';
-import Header from '../../components/Header.astro';
+import BaseHead from '../../components/BaseHead';
+import Footer from '../../components/Footer';
+import FormattedDate from '../../components/FormattedDate';
+import Header from '../../components/Header';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
+const pageUrl = Astro.url.toString();
+const rssUrl = new URL('rss.xml', Astro.site).toString();
+const sitemapUrl = new URL('sitemap-index.xml', Astro.site).toString();
+const generator = Astro.generator;
+const currentPath = Astro.url.pathname;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			main {
-				width: 960px;
-			}
-			ul {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 2rem;
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-			}
-			ul li {
-				width: calc(50% - 1rem);
-			}
-			ul li * {
-				text-decoration: none;
-				transition: 0.2s ease;
-			}
-			ul li:first-child {
-				width: 100%;
-				margin-bottom: 1rem;
-				text-align: center;
-			}
-			ul li:first-child img {
-				width: 100%;
-			}
-			ul li:first-child .title {
-				font-size: 2.369rem;
-			}
-			ul li img {
-				margin-bottom: 0.5rem;
-				border-radius: 12px;
-			}
-			ul li a {
-				display: block;
-			}
-			.title {
-				margin: 0;
-				color: rgb(var(--black));
-				line-height: 1;
-			}
-			.date {
-				margin: 0;
-				color: rgb(var(--gray));
-			}
-			ul li a:hover h4,
-			ul li a:hover .date {
-				color: rgb(var(--accent));
-			}
-			ul a:hover img {
-				box-shadow: var(--box-shadow);
-			}
-			@media (max-width: 720px) {
-				ul {
-					gap: 0.5em;
-				}
-				ul li {
-					width: 100%;
-					text-align: center;
-				}
-				ul li:first-child {
-					margin-bottom: 0;
-				}
-				ul li:first-child .title {
-					font-size: 1.563em;
-				}
-			}
-		</style>
+		<BaseHead
+			title={`Blog | ${SITE_TITLE}`}
+			description={SITE_DESCRIPTION}
+			canonicalUrl={canonicalUrl}
+			pageUrl={pageUrl}
+			rssUrl={rssUrl}
+			sitemapUrl={sitemapUrl}
+			generator={generator}
+		/>
 	</head>
 	<body>
-		<Header />
-		<main>
-			<section>
-				<ul>
-					{
-						posts.map((post) => (
-							<li>
-								<a href={`/blog/${post.id}/`}>
-									{post.data.heroImage && (
-										<Image width={720} height={360} src={post.data.heroImage} alt="" />
-									)}
-									<h4 class="title">{post.data.title}</h4>
-									<p class="date">
+		<Header currentPath={currentPath} />
+		<main class="mx-auto w-full max-w-content px-4 py-16">
+			<section class="flex flex-col gap-10">
+				<header class="text-center">
+					<h1 class="text-4xl font-bold text-ink sm:text-5xl">Latest Posts</h1>
+					<p class="mt-4 text-lg text-fog">
+						Dive into news, tutorials, and tips from the Astro community.
+					</p>
+				</header>
+				<ul class="grid list-none gap-8 p-0 sm:grid-cols-2">
+					{posts.map((post, index) => (
+						<li
+							class={`group ${index === 0 ? 'sm:col-span-2' : ''}`}
+							key={post.id}
+						>
+							<a
+								href={`/blog/${post.id}/`}
+								class="flex h-full flex-col overflow-hidden rounded-3xl bg-white/80 shadow-soft transition-shadow hover:shadow-lg"
+							>
+								{post.data.heroImage && (
+									<Image
+										class="h-52 w-full object-cover sm:h-64"
+										width={720}
+										height={360}
+										src={post.data.heroImage}
+										alt={post.data.title}
+									/>
+								)}
+								<div class="flex flex-1 flex-col gap-3 p-6">
+									<p class="text-sm font-medium uppercase tracking-wide text-mist">
 										<FormattedDate date={post.data.pubDate} />
 									</p>
-								</a>
-							</li>
-						))
-					}
+									<h4 class={`text-2xl font-semibold text-ink transition-colors group-hover:text-accent ${index === 0 ? 'sm:text-3xl' : ''}`}>
+										{post.data.title}
+									</h4>
+									<p class="text-base text-fog">
+										{post.data.description}
+									</p>
+								</div>
+							</a>
+						</li>
+					))}
 				</ul>
 			</section>
 		</main>

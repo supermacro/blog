@@ -18,9 +18,12 @@ If you have existing content authored in MDX, this integration will hopefully ma
 Here is how you import and use a UI component inside of MDX.  
 When you open this page in the browser, you should see the clickable button below.
 
-import HeaderLink from '../../components/HeaderLink.astro';
+import HeaderLink from '../../components/HeaderLink.tsx';
 
-<HeaderLink href="#" onclick="alert('clicked!')">
+<HeaderLink
+	href="#"
+	className="mt-4 inline-flex items-center justify-center gap-2 rounded-full border-b-0 bg-accent px-6 py-2 font-semibold text-white shadow-soft transition-colors hover:bg-accent-dark focus:outline-none focus:ring-2 focus:ring-accent/40"
+>
 	Embedded component in MDX
 </HeaderLink>
 
