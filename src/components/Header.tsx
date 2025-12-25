@@ -18,7 +18,7 @@ const Header = ({ currentPath }: HeaderProps) => (
 				<HeaderLink href="/" currentPath={currentPath}>
 					Home
 				</HeaderLink>
-				<HeaderLink href="/blog" currentPath={currentPath}>
+				<HeaderLink href="/archive" currentPath={currentPath}>
 					Archive
 				</HeaderLink>
 				<HeaderLink href="/about" currentPath={currentPath}>

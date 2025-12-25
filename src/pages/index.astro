@@ -15,7 +15,7 @@ const currentPath = Astro.url.pathname;
 
 const posts = (await getCollection('blog'))
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-	.slice(0, 6);
+	.slice(0, 3);
 ---
 
 <!doctype html>
@@ -37,9 +37,6 @@ const posts = (await getCollection('blog'))
 			<section class="space-y-6">
 				<header class="flex items-center justify-between">
 					<h2 class="text-xs uppercase tracking-[0.3em] text-mist/70">Latest entries</h2>
-					<a href="/blog" class="text-xs font-medium uppercase tracking-[0.3em] text-accent transition-colors hover:text-accent-dark">
-						View archive
-					</a>
 				</header>
 				<ul class="divide-y divide-cloud/70 border border-cloud/70 bg-white/60">
 					{posts.map((post) => (
