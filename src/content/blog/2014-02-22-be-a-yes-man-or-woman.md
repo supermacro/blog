@@ -2,6 +2,7 @@
 title: "Be A Yes Man (Or Woman!)"
 description: "I'd argue that a great movie is one that leaves its audience in astonishment and wonder. Personally, any movie that leaves you with nothing more than a few laughs or a stream of t…"
 pubDate: "2014-02-22"
+tags: ["forty-eight"]
 ---
 
 I'd argue that a great movie is one that leaves its audience in astonishment

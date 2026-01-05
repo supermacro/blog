@@ -2,6 +2,7 @@
 title: "Hello, Again"
 description: "Time has flown by this summer."
 pubDate: "2016-09-22"
+tags: ["entrepreneurship"]
 ---
 
 Time has flown by this summer.

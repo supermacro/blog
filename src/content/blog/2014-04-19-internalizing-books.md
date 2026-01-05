@@ -2,6 +2,7 @@
 title: "Internalizing Books"
 description: "As you may have noticed, it's nearly impossible to store all the contents of a book, be it fiction or non-fiction, into your mind. Most of us read in a way that is mentally comfor…"
 pubDate: "2014-04-19"
+tags: ["forty-eight"]
 ---
 
 As you may have noticed, it's nearly impossible to store all the contents of a

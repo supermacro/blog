@@ -2,6 +2,7 @@
 title: "I Suck at Math... For now"
 description: "So yesterday my roommate and I went grocery shopping. Now, before I explain, I have to state that I already knew how I've been at conducting mathematical operations, I just hadn't…"
 pubDate: "2014-01-25"
+tags: ["forty-eight"]
 ---
 
 So yesterday my roommate and I went grocery shopping. Now, before I explain, I have to state that I already knew how I've been at conducting mathematical operations, I just hadn't noticed the *extent* of this inability until this point.

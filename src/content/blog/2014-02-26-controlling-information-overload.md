@@ -2,6 +2,7 @@
 title: "Controlling Information Overload"
 description: "As someone who sees the value in all things, be it math, sports, reading, or anything obscure you can possibly think of, I often find myself struggling to stay on task with a spec…"
 pubDate: "2014-02-26"
+tags: ["forty-eight"]
 ---
 
 As someone who sees the value in all things, be it math, sports, reading, or

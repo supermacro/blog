@@ -2,6 +2,7 @@
 title: "Artificially Defeated"
 description: "After two grueling days of suffering, I finally finished the [first problem set](http://ocw.mit.edu/courses/electrical-engineering-and-computer- science/6-034-artificial-intellige…"
 pubDate: "2015-01-20"
+tags: ["posts"]
 ---
 
 After two grueling days of suffering, I finally finished the [first problem

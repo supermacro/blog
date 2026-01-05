@@ -2,6 +2,7 @@
 title: "To Do Make List Making a Habit"
 description: "With the sheer amount of things running around in my head I simply had to figure out a way to organize, categorize and prioritize."
 pubDate: "2015-02-14"
+tags: ["posts"]
 ---
 
 With the sheer amount of things running around in my head I simply had to

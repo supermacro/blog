@@ -2,6 +2,7 @@
 title: "Unlimit Yourself"
 description: "I have come to the realization that it's in our nature to limit our capabilities. All too often I'll hear people subtly diminishing their potential by highlighting some unfortunat…"
 pubDate: "2014-03-30"
+tags: ["forty-eight"]
 ---
 
 I have come to the realization that it's in our nature to limit our

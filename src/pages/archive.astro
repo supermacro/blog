@@ -7,6 +7,26 @@ const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
+// Group posts by tag
+const postsByTag = new Map<string, typeof posts>();
+
+// Define tag order to match original site
+const tagOrder = ['software', 'tutorial', 'entrepreneurship', 'habits', 'posts', 'forty-eight'];
+
+// Initialize map with ordered tags
+tagOrder.forEach(tag => postsByTag.set(tag, []));
+
+// Group posts by their tags
+posts.forEach((post) => {
+	const tags = post.data.tags || [];
+	tags.forEach((tag) => {
+		if (!postsByTag.has(tag)) {
+			postsByTag.set(tag, []);
+		}
+		postsByTag.get(tag)!.push(post);
+	});
+});
+
 // Format date like "Jan 8, 2022"
 const formatDate = (date: Date) => {
 	return date.toLocaleDateString('en-US', {
@@ -18,15 +38,30 @@ const formatDate = (date: Date) => {
 ---
 
 <BaseLayout title={`Archives | ${SITE_TITLE}`} description={SITE_DESCRIPTION}>
-	<h2 class="archive-heading text-center w-1/2 mx-auto mb-8">All Posts</h2>
-	<ul class="p-0">
-		{posts.map((post) => (
-			<li class="list-none mb-6">
-				<a href={`/blog/${post.id}/`} class="hover:text-red-600">
-					<div class="font-sans text-sm">{post.data.title}</div>
-					<div class="font-sans text-sm text-muted">{formatDate(post.data.pubDate)}</div>
-				</a>
-			</li>
-		))}
-	</ul>
+	<h2 class="text-2xl font-sans text-center mb-8">Recent Posts By Topic</h2>
+
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+		{tagOrder.map((tag) => {
+			const tagPosts = postsByTag.get(tag) || [];
+			if (tagPosts.length === 0) return null;
+
+			return (
+				<div class="tag-group">
+					<h3 class="text-lg font-sans mb-3">
+						<a href={`/tag/${tag}`} class="text-accent hover:underline">{tag}</a>
+					</h3>
+					<ul class="p-0 m-0">
+						{tagPosts.map((post) => (
+							<li class="list-none mb-3">
+								<a href={`/blog/${post.id}/`} class="hover:text-accent block">
+									<span class="font-sans text-sm block">{post.data.title}</span>
+									<span class="font-sans text-sm text-muted">{formatDate(post.data.pubDate)}</span>
+								</a>
+							</li>
+						))}
+					</ul>
+				</div>
+			);
+		})}
+	</div>
 </BaseLayout>

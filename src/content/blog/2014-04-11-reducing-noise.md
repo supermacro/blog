@@ -2,6 +2,7 @@
 title: "Reducing Noise"
 description: "I've slowly come to the realization that true innovative thought cannot come until we've removed distractions from our lives, and living in an age where things left, right, and ce…"
 pubDate: "2014-04-11"
+tags: ["forty-eight"]
 ---
 
 I've slowly come to the realization that true innovative thought cannot come

@@ -2,6 +2,7 @@
 title: "Statistical Illusions"
 description: "As humans, we tend to be bad statisticians. This may not seem like a significant issue at first, but what people don't realize is that life's decisions often involve statistical i…"
 pubDate: "2014-02-10"
+tags: ["forty-eight"]
 ---
 
 As humans, we tend to be bad statisticians. This may not seem like a

@@ -2,6 +2,7 @@
 title: "A Note on Guidance Councillors"
 description: "As someone not originally from Canada, many things stood out to me as a child. One of those things was the lack of pressure that adults place on kids. There is a belief here that…"
 pubDate: "2014-03-08"
+tags: ["forty-eight"]
 ---
 
 As someone not originally from Canada, many things stood out to me as a child.

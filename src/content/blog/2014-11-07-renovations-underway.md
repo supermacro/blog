@@ -2,6 +2,7 @@
 title: "Renovations Underway!"
 description: "[![construction](http://giorgiodelgado.ca/wp-content/uploads/2014/11 /construction-300x222.gif)](http://giorgiodelgado.ca/wp- content/uploads/2014/11/construction.gif)"
 pubDate: "2014-11-07"
+tags: ["posts"]
 ---
 
 [![construction](http://giorgiodelgado.ca/wp-content/uploads/2014/11

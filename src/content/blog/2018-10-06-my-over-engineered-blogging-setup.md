@@ -2,6 +2,7 @@
 title: "My Over-Engineered Blogging Setup"
 description: "A while ago, HTTP requests to my website stopped working for some reason. It was an error with my CDN (cloudflare). This, to me, was a sign from the gods that it was time to do so…"
 pubDate: "2018-10-06"
+tags: ["software", "tutorial"]
 ---
 
 A while ago, HTTP requests to my website stopped working for some reason. It was an error with my CDN (cloudflare). This, to me, was a sign from the gods that it was time to do something unnecessarily complex to fix the problem.

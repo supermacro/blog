@@ -2,6 +2,7 @@
 title: "Autodidact"
 description: "As mentioned in my last post, I want to gain a deeper understanding of Software and Technology in general. I never received formal education in software engineering. Despite this,…"
 pubDate: "2017-01-21"
+tags: ["entrepreneurship"]
 ---
 
 As mentioned in my [last post](/2017/01/12/goals-values.html), I want to gain

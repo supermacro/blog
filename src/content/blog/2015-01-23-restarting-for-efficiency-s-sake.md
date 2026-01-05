@@ -2,6 +2,7 @@
 title: "Restarting For Efficiency's Sake"
 description: "If you've been following my posts, you'll know that I'm nearly one month into my [self development challenge](http://giorgiodelgado.ca/self-development- challenge/), and I've got…"
 pubDate: "2015-01-23"
+tags: ["posts"]
 ---
 
 If you've been following my posts, you'll know that I'm nearly one month into

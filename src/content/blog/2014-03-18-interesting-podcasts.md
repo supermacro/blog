@@ -2,6 +2,7 @@
 title: "Interesting Podcasts"
 description: "On the days when you're simply too busy to sit down, kick your feet up, and take in the wisdom of a book, podcasts are the perfect alternative. Jam-packed with great information,…"
 pubDate: "2014-03-18"
+tags: ["forty-eight"]
 ---
 
 On the days when you're simply too busy to sit down, kick your feet up, and

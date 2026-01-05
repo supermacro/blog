@@ -2,6 +2,7 @@
 title: "Uncomfortableness"
 description: "Mental performance and ability are directly correlated to one's own success - just look at society's obsession with IQ tests and other assessments of mental aptitude. This idea th…"
 pubDate: "2015-06-02"
+tags: ["posts"]
 ---
 
 Mental performance and ability are directly correlated to one's own success -

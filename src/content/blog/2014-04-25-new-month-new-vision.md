@@ -2,6 +2,7 @@
 title: "New Month, New Vision"
 description: "With my four month internship coming to an end, I have begun to rethink my priorities as well as my goals."
 pubDate: "2014-04-25"
+tags: ["forty-eight"]
 ---
 
 With my four month internship coming to an end, I have begun to rethink my

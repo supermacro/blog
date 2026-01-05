@@ -2,6 +2,7 @@
 title: "Eliminating Dependance"
 description: "One's own attachment and need for others to get things done on your behalf couldn't be any more counterintuitive to the concept of productivity and achievement. As children, our h…"
 pubDate: "2014-03-12"
+tags: ["forty-eight"]
 ---
 
 One's own attachment and need for others to get things done on your behalf

@@ -2,6 +2,7 @@
 title: "One of My Idols"
 description: "Someone who has inspired me to become the best possible me is Emerson Spartz. The guy's simply unbelievable and was destined for greatness from the very beginning."
 pubDate: "2014-03-06"
+tags: ["forty-eight"]
 ---
 
 Someone who has inspired me to become the best possible me is Emerson Spartz.

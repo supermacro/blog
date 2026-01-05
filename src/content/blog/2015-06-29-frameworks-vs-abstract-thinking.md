@@ -2,6 +2,7 @@
 title: "Frameworks vs Abstract Thinking"
 description: "[![mathematics-chalkboards003104581](http://giorgiodelgado.ca/wp- content/uploads/2014/01/mathematics- chalkboards003104581-300x177.jpg)](http://giorgiodelgado.ca/wp- content/uplo…"
 pubDate: "2015-06-29"
+tags: ["posts"]
 ---
 
 [![mathematics-chalkboards_003104581](http://giorgiodelgado.ca/wp-

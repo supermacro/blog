@@ -2,6 +2,7 @@
 title: "Values & Goals"
 description: "As mentioned in my last post, I'd like to outline a rough overview of my values and goals for this year."
 pubDate: "2017-01-12"
+tags: ["habits"]
 ---
 
 As mentioned in my [last post](/2017/01/07/review.html), I'd like to outline a

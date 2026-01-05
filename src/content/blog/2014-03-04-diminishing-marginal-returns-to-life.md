@@ -2,6 +2,7 @@
 title: "Diminishing Marginal Returns To Life"
 description: "Staying on the topic of [idea overflow](http://giorgiodelgado.ca/information- overload.html \"Controlling Information Overload\") and [productivity](http://giorgiodelgado.ca/work-no…"
 pubDate: "2014-03-04"
+tags: ["forty-eight"]
 ---
 
 Staying on the topic of [idea overflow](http://giorgiodelgado.ca/information-

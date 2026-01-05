@@ -2,6 +2,7 @@
 title: "Survivorship Bias and Other Cool Stuff"
 description: "I got into a discussion with a family member about the usefulness of university and whether it's a worthwhile investment. This family member's argument was that some of the most s…"
 pubDate: "2014-02-04"
+tags: ["forty-eight"]
 ---
 
 I got into a discussion with a family member about the usefulness of

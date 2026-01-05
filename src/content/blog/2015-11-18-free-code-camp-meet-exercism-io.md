@@ -2,6 +2,7 @@
 title: "Free Code Camp, Meet exercism.io"
 description: "I love learning about technology. In particular, I am fascinated by the way the web works and want to continue learning more about it."
 pubDate: "2015-11-18"
+tags: ["posts"]
 ---
 
 I love learning about technology. In particular, I am fascinated by the way the web works and want to continue learning more about it.

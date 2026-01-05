@@ -2,6 +2,7 @@
 title: "Introversion"
 description: "... or, \"Journaling Vs. Blogging\""
 pubDate: "2016-10-16"
+tags: ["habits"]
 ---
 
 ## ... or, "Journaling Vs. Blogging"

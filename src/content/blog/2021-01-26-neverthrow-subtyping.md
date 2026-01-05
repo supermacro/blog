@@ -2,6 +2,7 @@
 title: "NeverThrow + Subtyping = ❤️"
 description: "This post is about the neverthrow TypeScript package, which is an implementation of Result / Either. If you've stumbled onto this post and haven't heard of these things, here is a…"
 pubDate: "2021-01-26"
+tags: ["software"]
 ---
 
 > This post is about the `neverthrow` TypeScript package, which is an implementation of `Result` / `Either`. If you've stumbled onto this post and haven't heard of these things, [here is a gentle introduction](https://gdelgado.ca/type-safe-error-handling-in-typescript.html#title) that doesn't assume anything about the reader other than knowledge of TypeScript.

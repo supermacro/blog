@@ -2,6 +2,7 @@
 title: "Context, Then Content"
 description: "I've had this post saved as a draft for a while now but I figured it's still worth talking about since I find this issue to be endemic in our education system."
 pubDate: "2015-08-04"
+tags: ["posts"]
 ---
 
 I've had this post saved as a draft for a while now but I figured it's still

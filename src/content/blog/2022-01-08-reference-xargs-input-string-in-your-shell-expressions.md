@@ -2,6 +2,7 @@
 title: "Reference xargs Input String In Your Shell Expressions"
 description: "While working on the Caribou Engineering Blog website (repo), I needed to do some reshuffling of the contents of a particular directory."
 pubDate: "2022-01-08"
+tags: ["software"]
 ---
 
 While working on the Caribou Engineering Blog website ([repo](https://github.com/getcaribou/eng-blog)), I needed to do some reshuffling of the contents of a particular directory. 

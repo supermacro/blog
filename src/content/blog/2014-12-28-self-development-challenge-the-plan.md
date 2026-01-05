@@ -2,6 +2,7 @@
 title: "Self Development Challenge The Plan"
 description: "In my previous post, I [presented my goals](http://giorgiodelgado.ca/self- development-challenge/) for the next four to eight months. In this post I will discuss the details of th…"
 pubDate: "2014-12-28"
+tags: ["posts"]
 ---
 
 In my previous post, I [presented my goals](http://giorgiodelgado.ca/self-

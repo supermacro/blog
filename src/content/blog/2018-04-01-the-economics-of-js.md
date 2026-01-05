@@ -2,6 +2,7 @@
 title: "The Economics of JS"
 description: "This is an opinion piece."
 pubDate: "2018-04-02"
+tags: ["software"]
 ---
 
 This is an opinion piece.

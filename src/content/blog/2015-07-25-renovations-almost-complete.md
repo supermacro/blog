@@ -2,6 +2,7 @@
 title: "Renovations Almost Complete"
 description: "I've been working on a few things all at once so progression on everything hasn't been as quick as I had hoped. Like I mentioned on [this post](http://giorgiodelgado.ca/page3/), I…"
 pubDate: "2015-07-25"
+tags: ["posts"]
 ---
 
 I've been working on a few things all at once so progression on everything

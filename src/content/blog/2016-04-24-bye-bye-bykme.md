@@ -2,6 +2,7 @@
 title: "Bye Bye BykMe"
 description: "Back in the fall of 2014 I noticed that municipal bicycle sharing programs were a huge financial burden. The cost of high tech bike racks, maintenance, and balancing out bike flee…"
 pubDate: "2016-04-24"
+tags: ["entrepreneurship"]
 ---
 
 Back in the fall of 2014 I noticed that municipal bicycle sharing programs

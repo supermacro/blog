@@ -2,6 +2,7 @@
 title: "Therapy In Writing"
 description: "In retrospect, there was considerable doubt when I told myself that I'd write a post every other day without skipping a beat, but the more I do it, the easier it becomes. I've fou…"
 pubDate: "2014-04-07"
+tags: ["forty-eight"]
 ---
 
 In retrospect, there was considerable doubt when I told myself that I'd write

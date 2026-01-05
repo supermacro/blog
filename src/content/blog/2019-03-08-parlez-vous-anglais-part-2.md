@@ -2,6 +2,7 @@
 title: "Parlez-Vous Anglais? (Part 2)"
 description: "Link to Part 1"
 pubDate: "2019-03-08"
+tags: ["software"]
 ---
 
 Link to [Part 1]({filename}2018-12-28-parlez-pt1.md)

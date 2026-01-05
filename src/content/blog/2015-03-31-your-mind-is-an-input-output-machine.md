@@ -2,6 +2,7 @@
 title: "Your Mind Is An Input Output Machine"
 description: "Something I constantly remind myself of is that my brain, like any ordinary computer, functions to process input data (sound, visual, taste, touch, etc...), interpret [or disregar…"
 pubDate: "2015-03-31"
+tags: ["posts"]
 ---
 
 Something I constantly remind myself of is that my brain, like any ordinary

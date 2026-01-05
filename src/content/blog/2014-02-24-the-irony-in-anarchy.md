@@ -2,6 +2,7 @@
 title: "The Irony In Anarchy"
 description: "In my previous post about [Venezuela's current condition](http://giorgiodelgado.ca/venezuela-needs-your-help.html \"Venezuela Needs Your Help\"), I updated you on the matter current…"
 pubDate: "2014-02-24"
+tags: ["forty-eight"]
 ---
 
 In my previous post about [Venezuela's current

@@ -2,6 +2,7 @@
 title: "Listen To Tyler Durden"
 description: "https://www.youtube.com/watch?v=tPPvkhGZT7Y"
 pubDate: "2014-04-13"
+tags: ["forty-eight"]
 ---
 
 https://www.youtube.com/watch?v=tPPvkhGZT7Y

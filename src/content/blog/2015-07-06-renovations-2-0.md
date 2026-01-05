@@ -2,6 +2,7 @@
 title: "Renovations 2.0"
 description: "In an effort to continue learning more about technology and keep my skills sharp (and save some moneyz), I'm going to migrate from Wordpress to Jekyll / [GitHub Pages](//pages.git…"
 pubDate: "2015-07-06"
+tags: ["posts"]
 ---
 
 In an effort to continue learning more about technology and keep my skills

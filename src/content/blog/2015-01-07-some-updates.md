@@ -2,6 +2,7 @@
 title: "Some Updates"
 description: "Artificial Intelligence"
 pubDate: "2015-01-07"
+tags: ["posts"]
 ---
 
 ## Artificial Intelligence

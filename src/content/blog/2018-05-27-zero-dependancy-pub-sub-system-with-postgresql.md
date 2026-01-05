@@ -2,6 +2,7 @@
 title: "Zero dependancy Pub / Sub system with PostgreSQL"
 description: "At Setter we have a 2nd generation API server that handles:"
 pubDate: "2018-05-27"
+tags: ["software"]
 ---
 
 At [Setter](https://setter.com/) we have a 2nd generation API server that handles:

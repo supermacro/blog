@@ -2,6 +2,7 @@
 title: "Say Hello to BykMe"
 description: "As of today, BykMe is live!"
 pubDate: "2015-03-24"
+tags: ["posts"]
 ---
 
 As of today, [BykMe](https://bykme.sharetribe.com/) is live!

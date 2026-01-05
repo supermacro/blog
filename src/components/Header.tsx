@@ -16,12 +16,12 @@ const Header = ({ currentPath }: HeaderProps) => (
 			<ul className="flex justify-center gap-4 p-0 m-0">
 				<li className="list-none">
 					<HeaderLink href="/about" currentPath={currentPath}>
-						about
+						About
 					</HeaderLink>
 				</li>
 				<li className="list-none">
 					<HeaderLink href="/archive" currentPath={currentPath}>
-						archives
+						Archives
 					</HeaderLink>
 				</li>
 			</ul>

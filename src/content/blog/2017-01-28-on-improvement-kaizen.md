@@ -2,6 +2,7 @@
 title: "On Improvement & Kaizen"
 description: "One of my 2017 goals has been to live a healthier lifestyle. Since the new year, I've been attending a calisthenics class twice a week. The exercises we do are drawn out over long…"
 pubDate: "2017-01-28"
+tags: ["habits"]
 ---
 
 One of my 2017 goals has been to live a healthier lifestyle. Since the new

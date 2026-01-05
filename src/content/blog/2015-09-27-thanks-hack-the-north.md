@@ -2,6 +2,7 @@
 title: "Thanks, Hack The North"
 description: "This past weekend, I had the awesome opportunity of attending [Hack The North](http://hackthenorth.com/) and I've got to say it was quite a memorable experience."
 pubDate: "2015-09-27"
+tags: ["posts"]
 ---
 
 This past weekend, I had the awesome opportunity of attending [Hack The

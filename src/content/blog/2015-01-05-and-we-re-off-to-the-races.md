@@ -2,6 +2,7 @@
 title: "And We're Off to the Races!"
 description: "Today marks day one of the [Self Development Challenge](http://giorgiodelgado.ca/self-development-challenge-the-plan/) and I've got to say how exciting it feels once again to star…"
 pubDate: "2015-01-05"
+tags: ["posts"]
 ---
 
 Today marks day one of the [Self Development

@@ -2,6 +2,7 @@
 title: "The Golden Rule"
 description: "Admittedly, last night's partying in downtown Toronto (Pravda was the location of choice, check it out if you're ever in town) left me with an incomplete timeline of events. I did…"
 pubDate: "2014-04-05"
+tags: ["forty-eight"]
 ---
 
 Admittedly, last night's partying in downtown Toronto

@@ -2,6 +2,7 @@
 title: "So You Want To Take a MOOC"
 description: "You are now able to learn anything you want at a fraction of the cost of a physical institution thanks to the advent of MOOCS, or [Massive Open Online Courses](https://en.wikipedi…"
 pubDate: "2016-04-02"
+tags: ["posts"]
 ---
 
 You are now able to learn anything you want at a fraction of the cost of a

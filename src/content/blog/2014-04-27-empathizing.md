@@ -2,6 +2,7 @@
 title: "Empathizing"
 description: "We're all too quick to judge in this day and age. Perception is largely based on how we market ourselves in social networks with the intention of appealing to the masses - this ha…"
 pubDate: "2014-04-27"
+tags: ["forty-eight"]
 ---
 
 We're all too quick to judge in this day and age. Perception is largely based

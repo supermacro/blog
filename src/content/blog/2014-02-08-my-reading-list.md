@@ -2,6 +2,7 @@
 title: "My Reading List"
 description: "Like previously mentioned, [I'm all about continual self improvement](http://giorgiodelgado.ca/the-starbucks-alternative.html). But much like the show \"Hoarders\", I too have a pro…"
 pubDate: "2014-02-08"
+tags: ["forty-eight"]
 ---
 
 Like previously mentioned, [I'm all about continual self

@@ -2,6 +2,7 @@
 title: "Thoughts from a Wanna Be Entrepreneur"
 description: "Note: Entrepreneurship is not just about starting a company. It's the result of creativity and passion. Painting because you love painting and don't care about the financial impli…"
 pubDate: "2016-01-04"
+tags: ["posts"]
 ---
 
 > Note: Entrepreneurship is not just about starting a company. It's the result of creativity and passion. Painting because you love painting and don't care about the financial implications of such an action can be defined as entrepreneurial.

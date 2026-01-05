@@ -2,6 +2,7 @@
 title: "10 Days of Learning"
 description: "Lots has happened between my last post and now. From expanding my professional network and creating meaningful connections, to [finalizing my product's registration page](http://g…"
 pubDate: "2015-02-10"
+tags: ["posts"]
 ---
 
 Lots has happened between my last post and now. From expanding my professional

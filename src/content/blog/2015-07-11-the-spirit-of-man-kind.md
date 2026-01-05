@@ -2,6 +2,7 @@
 title: "The Spirit of Man Kind"
 description: "I'm currently reading [The First Men in the Moon](https://www.amazon.ca/HG- Wells-Classic- Collection-I/dp/0575095202), by H. G. Wells. If you're not into Science Fiction, any of…"
 pubDate: "2015-07-11"
+tags: ["posts"]
 ---
 
 I'm currently reading [The First Men in the Moon](https://www.amazon.ca/HG-

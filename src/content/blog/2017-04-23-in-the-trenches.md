@@ -2,6 +2,7 @@
 title: "In The Trenches"
 description: "Despite my best intentions, it has been hard to publish a blog post once a week. I could put in a weak effort (get it?) and publish something of little substance simply to fill my…"
 pubDate: "2017-04-23"
+tags: ["entrepreneurship"]
 ---
 
 Despite my best intentions, it has been hard to publish a blog post once a week. I could put in a weak effort (get it?) and publish something of little substance simply to fill my quota. But I rather not do that.

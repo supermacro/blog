@@ -2,6 +2,7 @@
 title: "Information Diets"
 description: "A nutritional diet leads to a healthy and vigorous body & mind. It is one's own responsibility to maintain a good eating regimen so as to sustain the demands of the body and prolo…"
 pubDate: "2015-08-08"
+tags: ["posts"]
 ---
 
 A nutritional diet leads to a healthy and vigorous body & mind. It is one's

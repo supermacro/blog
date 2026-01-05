@@ -2,6 +2,7 @@
 title: "Business Development Week"
 description: "Besides the fact that I'm running on no sleep due to a family wedding, this whole week was spent developing my business idea."
 pubDate: "2015-01-15"
+tags: ["posts"]
 ---
 
 Besides the fact that I'm running on no sleep due to a family wedding, this

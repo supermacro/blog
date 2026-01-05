@@ -2,6 +2,7 @@
 title: "Rewiring Yourself ... Again"
 description: "I've been slacking with productivity as of late and even broke my habit of waking up early this past week. The problem I find with breaking newly-formed habits is that trying to g…"
 pubDate: "2014-03-20"
+tags: ["forty-eight"]
 ---
 
 I've been slacking with productivity as of late and even broke my habit of

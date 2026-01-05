@@ -2,6 +2,7 @@
 title: "Self Teaching"
 description: "After I wrote my piece on [disruptive innovation](http://giorgiodelgado.ca /exploiting-disruptive-innovation.html \"Exploiting Disruptive Innovation\"), I began reading more on the…"
 pubDate: "2014-04-01"
+tags: ["forty-eight"]
 ---
 
 After I wrote my piece on [disruptive innovation](http://giorgiodelgado.ca

@@ -2,6 +2,7 @@
 title: "Robinhood, The Finance Industry's Newest Innovation"
 description: "http://vimeo.com/87163777"
 pubDate: "2014-02-28"
+tags: ["forty-eight"]
 ---
 
 http://vimeo.com/87163777

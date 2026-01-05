@@ -2,6 +2,7 @@
 title: "Be Water, My Friend"
 description: "As I write this, I'm wrapping up a refreshing stair climb situated within a tree-covered ravine. The 42 wooden steps that I lapped on blend perfectly with the surrounding forestry…"
 pubDate: "2014-04-29"
+tags: ["forty-eight"]
 ---
 
 As I write this, I'm wrapping up a refreshing stair climb situated within a

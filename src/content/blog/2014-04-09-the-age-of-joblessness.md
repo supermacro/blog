@@ -2,6 +2,7 @@
 title: "The Age Of Joblessness"
 description: "Haven't been feeling too well as of late. Add a final exam coming up and the result is a squeezed-out blog post. I do, however, intend on writing every other day for the rest of m…"
 pubDate: "2014-04-09"
+tags: ["forty-eight"]
 ---
 
 Haven't been feeling too well as of late. Add a final exam coming up and the

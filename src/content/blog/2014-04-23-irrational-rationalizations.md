@@ -2,6 +2,7 @@
 title: "Irrational Rationalizations"
 description: "A friend of mine constantly battles with himself and his inability to break bad habits. On the one hand, he knows that every breath he takes through the filter of a cigarette is a…"
 pubDate: "2014-04-23"
+tags: ["forty-eight"]
 ---
 
 A friend of mine constantly battles with himself and his inability to break

@@ -2,6 +2,7 @@
 title: "Hello World"
 description: "I'm really excited to get this website underway. There's lots of brainstorming going on concerning the potential of what can be done here."
 pubDate: "2014-01-21"
+tags: ["forty-eight"]
 ---
 
 I'm really excited to get this website underway. There's lots of brainstorming going on concerning the potential of what can be done here.

@@ -2,6 +2,7 @@
 title: "Automation Is Nigh"
 description: "As I learn more about VBA programming, I can't help but think that at some point in the near future life will be completely automated. So much so that humanity may be at the cusp…"
 pubDate: "2014-03-22"
+tags: ["forty-eight"]
 ---
 
 As I learn more about VBA programming, I can't help but think that at some

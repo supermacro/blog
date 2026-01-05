@@ -2,6 +2,7 @@
 title: "Chaining Failable Tasks"
 description: "This post assumes familiarity with TypeScript."
 pubDate: "2020-03-07"
+tags: ["software"]
 ---
 
 *This post assumes familiarity with TypeScript.*

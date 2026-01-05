@@ -2,6 +2,7 @@
 title: "Steer Clear of Markets"
 description: "No matter how many other people want to buy a stock, you should buy only if the stock is a cheap way to own a desirable business. - Jason Zweig, The Intelligent Investor"
 pubDate: "2014-01-23"
+tags: ["forty-eight"]
 ---
 
 > No matter how many other people want to buy a stock, you should buy only if the stock is a cheap way to own a desirable business. - Jason Zweig, The Intelligent Investor

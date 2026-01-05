@@ -2,6 +2,7 @@
 title: "The Best Investment"
 description: "Having finished reading a book over the weekend made me realize how much they impact human advancement. They serve as the telescope into the universe of knowledge. Our innate ment…"
 pubDate: "2014-03-24"
+tags: ["forty-eight"]
 ---
 
 Having finished reading a book over the weekend made me realize how much they

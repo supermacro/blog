@@ -2,6 +2,7 @@
 title: "The Modern Allegory of the Cave"
 description: "[![LBiXDH3](http://giorgiodelgado.ca/wp- content/uploads/2014/02/LBiXDH3-200x300.jpg)](http://giorgiodelgado.ca/wp- content/uploads/2014/02/LBiXDH3.jpg)"
 pubDate: "2014-02-14"
+tags: ["forty-eight"]
 ---
 
 [![LBiXDH3](http://giorgiodelgado.ca/wp-

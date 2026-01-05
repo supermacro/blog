@@ -16,6 +16,9 @@ const formatDate = (date: Date) => {
 		day: 'numeric',
 	});
 };
+
+// Get the first tag for display
+const firstTag = latestPost.data.tags?.[0];
 ---
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
@@ -28,6 +31,12 @@ const formatDate = (date: Date) => {
 		</h2>
 		<div class="article-meta font-sans text-sm mb-4">
 			{formatDate(latestPost.data.pubDate)}
+			{firstTag && (
+				<>
+					{' '}in{' '}
+					<a href={`/tag/${firstTag}`} class="text-accent hover:underline">{firstTag}</a>
+				</>
+			)}
 		</div>
 		<p class="mb-4">{latestPost.data.description}</p>
 		<a href={`/blog/${latestPost.id}/`} class="italic border-b border-accent hover:text-accent">

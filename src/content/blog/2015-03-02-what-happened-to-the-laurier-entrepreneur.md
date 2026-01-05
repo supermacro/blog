@@ -2,6 +2,7 @@
 title: "What Happened to the Laurier Entrepreneur"
 description: "I'm beyond the halfway point of my [self development challenge]({filename}2014-12-26-Self-Development-Challenge) and through my experience as a covert Laurier student taking a Uni…"
 pubDate: "2015-03-02"
+tags: ["posts"]
 ---
 
 I'm beyond the halfway point of my [self development

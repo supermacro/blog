@@ -2,6 +2,7 @@
 title: "Self Development Challenge"
 description: "I have been quite interested in the pursuit of self-education for some time now."
 pubDate: "2014-12-26"
+tags: ["posts"]
 ---
 
 I have been quite interested in the pursuit of self-education for some time

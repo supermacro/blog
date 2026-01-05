@@ -2,6 +2,7 @@
 title: "Let the Excitement Begin"
 description: "I'm very excited to announce that just a few days ago I launched a landing page for my service. I am looking to create a peer-to-peer bike sharing network where locals can rent ou…"
 pubDate: "2015-02-06"
+tags: ["posts"]
 ---
 
 I'm very excited to announce that just a few days ago I launched a landing

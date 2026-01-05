@@ -2,6 +2,7 @@
 title: "Core Concepts Of Value"
 description: "My [recently added tab, Valuation](http://giorgiodelgado.ca/valuation \"Valuation\"), was created for the purpose of reciting what I have learned so far in the art of company valuat…"
 pubDate: "2014-02-18"
+tags: ["forty-eight"]
 ---
 
 My [recently added tab, _Valuation_](http://giorgiodelgado.ca/valuation

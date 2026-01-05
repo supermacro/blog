@@ -2,6 +2,7 @@
 title: "Type-Safe Error Handling In TypeScript"
 description: "We've all been there before. We write a function that has to deal with some edge case, and we use the throw keyword in order to handle this situation:"
 pubDate: "2019-04-29"
+tags: ["software"]
 ---
 
 We've all been there before. We write a function that has to deal with some edge case, and we use the `throw` keyword in order to handle this situation:

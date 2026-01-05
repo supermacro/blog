@@ -2,6 +2,7 @@
 title: "The Starbucks Alternative"
 description: "I'm all about continual self improvement. One of the ways I have tried to become a better me has been by waking up as early as possible in order to read for at least one hour per…"
 pubDate: "2014-01-29"
+tags: ["forty-eight"]
 ---
 
 I'm all about continual self improvement. One of the ways I have tried to

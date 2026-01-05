@@ -2,6 +2,7 @@
 title: "I Just Did What?"
 description: "In an effort to not burn myself out (again) I have placed little importance on updating this blog. I've just been too busy with other things to stay sane and manage all the things…"
 pubDate: "2015-02-24"
+tags: ["posts"]
 ---
 
 In an effort to not burn myself out (again) I have placed little importance on

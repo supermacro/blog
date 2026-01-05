@@ -2,6 +2,7 @@
 title: "Instagram = Horde of Naive \"Businessmen\""
 description: "I've been trying to remember an accountholder's username in order to post this. Well, today my good-ol' brain decided to retrieve this great bit of info."
 pubDate: "2014-02-06"
+tags: ["forty-eight"]
 ---
 
 I've been trying to remember an accountholder's username in order to post

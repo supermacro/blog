@@ -2,6 +2,7 @@
 title: "Iatrogenesis"
 description: "I can't say that my Health Economics online course has been a pleasant experience while working full time. It has, however, provided me with some interesting insights."
 pubDate: "2014-03-26"
+tags: ["forty-eight"]
 ---
 
 I can't say that my Health Economics online course has been a pleasant

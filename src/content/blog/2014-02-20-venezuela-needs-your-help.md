@@ -2,6 +2,7 @@
 title: "Venezuela Needs Your Help"
 description: "If you already haven't heard, Venezuela is virtually at the brink of civil war. The tyrannous government has ruled for over a decade now with noticeable revolt. But on this past F…"
 pubDate: "2014-02-20"
+tags: ["forty-eight"]
 ---
 
 If you already haven't heard, Venezuela is virtually at the brink of civil

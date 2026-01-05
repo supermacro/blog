@@ -2,6 +2,7 @@
 title: "Mindful Meditation"
 description: "Meditation is something I definitely don't do enough of. On the odd occasion in which I have given it an honest attempt, I always come out with a refreshed mind. Being an active i…"
 pubDate: "2014-04-17"
+tags: ["forty-eight"]
 ---
 
 Meditation is something I definitely don't do enough of. On the odd occasion

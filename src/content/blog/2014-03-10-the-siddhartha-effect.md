@@ -2,6 +2,7 @@
 title: "The Siddhartha Effect"
 description: "While chatting over some drinks with a good friend of mine we began comparing the differences behind knowledge gained through informational transfer, and knowledge gained through…"
 pubDate: "2014-03-10"
+tags: ["forty-eight"]
 ---
 
 While chatting over some drinks with a good friend of mine we began comparing

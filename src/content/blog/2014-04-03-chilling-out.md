@@ -2,6 +2,7 @@
 title: "Chilling Out"
 description: "I find it very difficult to reject the opportunity to learn something new, or to go out of my comfort zone to expand my horizons. the undertaking of more tasks, however, impedes t…"
 pubDate: "2014-04-03"
+tags: ["forty-eight"]
 ---
 
 I find it very difficult to reject the opportunity to learn something new, or

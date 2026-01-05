@@ -2,6 +2,7 @@
 title: "Mentally Exhausted"
 description: "I've been running on very little sleep, and my mental gas tank is near empty. Add a mild hangover to the mix and voila; the ultimate writer's block."
 pubDate: "2014-02-16"
+tags: ["forty-eight"]
 ---
 
 I've been running on very little sleep, and my mental gas tank is near empty.

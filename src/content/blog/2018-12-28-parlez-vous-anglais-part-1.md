@@ -2,6 +2,7 @@
 title: "Parlez-Vous Anglais? (Part 1)"
 description: "Table Of Contents"
 pubDate: "2018-12-28"
+tags: ["software"]
 ---
 
 # Table Of Contents

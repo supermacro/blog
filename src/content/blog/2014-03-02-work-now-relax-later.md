@@ -2,6 +2,7 @@
 title: "Work Now, Relax Later"
 description: "I came across a status asking for motivation to finish an assignment as I guiltily scrolled through Facebook. To assist I posted this image:"
 pubDate: "2014-03-02"
+tags: ["forty-eight"]
 ---
 
 I came across a status asking for motivation to finish an assignment as I

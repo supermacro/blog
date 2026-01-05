@@ -2,6 +2,7 @@
 title: "The Market For Uniqueness"
 description: "To most people, economics is an unappreciable subject that lies well beyond the realm of practicality. Admittedly, at first glance the concepts do seem somewhat trivial until you…"
 pubDate: "2014-04-21"
+tags: ["forty-eight"]
 ---
 
 To most people, economics is an unappreciable subject that lies well beyond
