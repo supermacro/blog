@@ -2,7 +2,6 @@
 import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead';
 import Footer from '../components/Footer';
-import FormattedDate from '../components/FormattedDate';
 import Header from '../components/Header';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
@@ -14,8 +13,18 @@ const generator = Astro.generator;
 const currentPath = Astro.url.pathname;
 
 const posts = (await getCollection('blog'))
-	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-	.slice(0, 3);
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const latestPost = posts[0];
+
+// Format date like "January 8, 2022"
+const formatDate = (date: Date) => {
+	return date.toLocaleDateString('en-US', {
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric',
+	});
+};
 ---
 
 <!doctype html>
@@ -33,29 +42,22 @@ const posts = (await getCollection('blog'))
 	</head>
 	<body>
 		<Header currentPath={currentPath} />
-		<main class="mx-auto flex w-full max-w-content flex-col gap-16 px-4 py-16">
-			<section class="space-y-6">
-				<header class="flex items-center justify-between">
-					<h2 class="text-xs uppercase tracking-[0.3em] text-mist/70">Latest entries</h2>
-				</header>
-				<ul class="divide-y divide-cloud/70 border border-cloud/70 bg-white/60">
-					{posts.map((post) => (
-						<li class="px-4 py-5" key={post.id}>
-							<a href={`/blog/${post.id}/`} class="flex flex-col gap-1 text-inherit no-underline">
-								<span class="text-xs uppercase tracking-[0.3em] text-mist/60">
-									<FormattedDate date={post.data.pubDate} />
-								</span>
-								<span class="text-lg font-medium text-ink transition-colors hover:text-accent">
-									{post.data.title}
-								</span>
-								<span class="text-sm text-mist">
-									{post.data.description}
-								</span>
-							</a>
-						</li>
-					))}
-				</ul>
-			</section>
+		<main>
+			<div class="latest-article">
+				<h3 class="text-sm opacity-75 font-sans mb-2">Latest Post:</h3>
+				<h2 class="article-title text-2xl mb-2">
+					<a href={`/blog/${latestPost.id}/`} class="text-heading hover:text-accent">
+						{latestPost.data.title}
+					</a>
+				</h2>
+				<div class="article-meta font-sans text-sm mb-4">
+					{formatDate(latestPost.data.pubDate)}
+				</div>
+				<p class="mb-4">{latestPost.data.description}</p>
+				<a href={`/blog/${latestPost.id}/`} class="italic border-b border-accent hover:text-accent">
+					Continue Reading ...
+				</a>
+			</div>
 		</main>
 		<Footer />
 	</body>

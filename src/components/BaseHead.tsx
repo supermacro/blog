@@ -35,8 +35,9 @@ const BaseHead = ({
 			<link rel="sitemap" href={sitemapUrl} />
 			<link rel="alternate" type="application/rss+xml" title={SITE_TITLE} href={rssUrl} />
 			<meta name="generator" content={generator} />
-			<link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossOrigin="anonymous" />
-			<link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossOrigin="anonymous" />
+			<link rel="preconnect" href="https://fonts.googleapis.com" />
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+			<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
 			<link rel="canonical" href={canonicalUrl} />
 			<title>{title}</title>
 			<meta name="title" content={title} />

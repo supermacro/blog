@@ -5,30 +5,27 @@ const config: Config = {
 	theme: {
 		extend: {
 			colors: {
-				accent: '#0ea5e9',
-				'accent-dark': '#0284c7',
-				ink: '#0f172a',
-				fog: '#1f2937',
-				mist: '#4b5563',
-				cloud: '#e2e8f0',
-				canvas: '#f8fafc',
+				// Old site colors
+				heading: '#3c3c3c',
+				accent: '#8e7dfe',
+				'accent-dark': '#7a6be0',
+				body: '#333333',
+				muted: '#86888b',
+				border: '#ebebeb',
+				'code-bg': 'rgba(107, 107, 107, 0.1)',
+				'code-text': '#533afb',
+				'pre-bg': 'rgba(248, 245, 254, 0.52)',
 			},
 			fontFamily: {
-				sans: ['"Atkinson"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-				mono: [
-					'"JetBrains Mono"',
-					'"IBM Plex Mono"',
-					'ui-monospace',
-					'SFMono-Regular',
-					'Menlo',
-					'monospace',
-				],
-			},
-			boxShadow: {
-				soft: '0 12px 32px rgba(15, 23, 42, 0.05)',
+				serif: ['"Noto Serif"', 'Georgia', 'Cambria', 'serif'],
+				sans: ['"Open Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
 			},
 			maxWidth: {
-				content: '780px',
+				content: '660px',
+				page: '900px',
+			},
+			lineHeight: {
+				relaxed: '1.75',
 			},
 		},
 	},

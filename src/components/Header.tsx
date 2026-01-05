@@ -1,4 +1,4 @@
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { SITE_TITLE } from '../consts';
 import HeaderLink from './HeaderLink';
 
 type HeaderProps = {
@@ -6,25 +6,25 @@ type HeaderProps = {
 };
 
 const Header = ({ currentPath }: HeaderProps) => (
-	<header className="border-b border-cloud/70 bg-transparent">
-		<nav className="mx-auto flex max-w-content items-center justify-between px-4 py-6">
-			<div className="flex flex-col">
-				<a href="/" className="text-base font-semibold uppercase tracking-[0.28em] text-mist no-underline">
-					{SITE_TITLE}
-				</a>
-				<span className="mt-1 text-xs text-mist/70">{SITE_DESCRIPTION}</span>
-			</div>
-			<div className="flex items-center gap-3 text-sm">
-				<HeaderLink href="/" currentPath={currentPath}>
-					Home
-				</HeaderLink>
-				<HeaderLink href="/archive" currentPath={currentPath}>
-					Archive
-				</HeaderLink>
-				<HeaderLink href="/about" currentPath={currentPath}>
-					About
-				</HeaderLink>
-			</div>
+	<header className="py-8">
+		<div className="flex justify-center">
+			<a href="/" className="text-heading transition-colors duration-200 hover:text-accent">
+				<h1 className="text-center text-3xl italic font-normal">{SITE_TITLE}</h1>
+			</a>
+		</div>
+		<nav className="mt-4">
+			<ul className="flex justify-center gap-4 p-0 m-0">
+				<li className="list-none">
+					<HeaderLink href="/about" currentPath={currentPath}>
+						about
+					</HeaderLink>
+				</li>
+				<li className="list-none">
+					<HeaderLink href="/archive" currentPath={currentPath}>
+						archives
+					</HeaderLink>
+				</li>
+			</ul>
 		</nav>
 	</header>
 );

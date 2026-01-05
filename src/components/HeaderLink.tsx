@@ -23,9 +23,8 @@ const HeaderLink = ({ href, currentPath = '/', className, children, ...rest }: H
 			: normalizedPath === normalizedTarget || normalizedPath.startsWith(`${normalizedTarget}/`);
 
 	const baseClasses =
-		'relative inline-flex items-center px-2 py-1 font-medium text-mist transition-colors hover:text-accent';
-	const activeClasses =
-		'text-ink after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:bg-accent after:content-[""]';
+		'font-sans font-bold text-heading opacity-85 lowercase transition-colors hover:text-accent';
+	const activeClasses = 'text-accent';
 	const composedClassName = [baseClasses, isActive ? activeClasses : null, className]
 		.filter(Boolean)
 		.join(' ');
