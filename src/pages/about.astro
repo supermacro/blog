@@ -1,101 +1,74 @@
 ---
-import BaseHead from '../components/BaseHead';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import { SITE_TITLE } from '../consts';
-
-const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
-const pageUrl = Astro.url.toString();
-const rssUrl = new URL('rss.xml', Astro.site).toString();
-const sitemapUrl = new URL('sitemap-index.xml', Astro.site).toString();
-const generator = Astro.generator;
-const currentPath = Astro.url.pathname;
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead
-			title={`About | ${SITE_TITLE}`}
-			description="Giorgio - what I'm working on and what I care about."
-			canonicalUrl={canonicalUrl}
-			pageUrl={pageUrl}
-			rssUrl={rssUrl}
-			sitemapUrl={sitemapUrl}
-			generator={generator}
-		/>
-	</head>
-	<body>
-		<Header currentPath={currentPath} />
-		<main>
-			<div class="page-container prose">
-				<h2>About</h2>
-				<p>
-					Hi 👋! My name's Giorgio as you probably already noticed, but a lot of people call me Gio.
-				</p>
-				<p>
-					I studied Economics at Wilfrid Laurier University, taught myself how to code and started a software company while in School. I ended up participating in the <a href="https://www.nextcanada.com/next-36/">Next 36 program</a> in 2016 and haven't looked back since. Although my company didn't succeed, I came out of the experience learning A LOT, and knowing that software is where I see myself long term.
-				</p>
-				<p>
-					From 2016 - 2020, I worked at a lovely company called <a href="https://setter.com/">Setter</a> as a full stack developer.
-				</p>
-				<p>
-					I also worked on a little app on the side (written in <a href="https://elm-lang.org/">Elm</a>) between 2018 - 2020 called <a href="https://github.com/parlez-vous/">ParlezVous</a>. Elm is such a great learning tool and great way to dive into Functional Programming! Makes programming feel quite fun compared to any other language I've used.
-				</p>
-				<p>
-					More recently, I was convinced to join <a href="https://www.caribouwealth.com/">Caribou</a> as its founding engineer. We're <a href="https://caribouwealth.notion.site/Careers-at-Caribou-357783b6007f4d15bae8c7b9651cebf5">hiring</a>!
-				</p>
+<BaseLayout title={`About | ${SITE_TITLE}`} description="Giorgio - what I'm working on and what I care about.">
+	<div class="page-container prose">
+		<h2>About</h2>
+		<p>
+			Hi 👋! My name's Giorgio as you probably already noticed, but a lot of people call me Gio.
+		</p>
+		<p>
+			I studied Economics at Wilfrid Laurier University, taught myself how to code and started a software company while in School. I ended up participating in the <a href="https://www.nextcanada.com/next-36/">Next 36 program</a> in 2016 and haven't looked back since. Although my company didn't succeed, I came out of the experience learning A LOT, and knowing that software is where I see myself long term.
+		</p>
+		<p>
+			From 2016 - 2020, I worked at a lovely company called <a href="https://setter.com/">Setter</a> as a full stack developer.
+		</p>
+		<p>
+			I also worked on a little app on the side (written in <a href="https://elm-lang.org/">Elm</a>) between 2018 - 2020 called <a href="https://github.com/parlez-vous/">ParlezVous</a>. Elm is such a great learning tool and great way to dive into Functional Programming! Makes programming feel quite fun compared to any other language I've used.
+		</p>
+		<p>
+			More recently, I was convinced to join <a href="https://www.caribouwealth.com/">Caribou</a> as its founding engineer. We're <a href="https://caribouwealth.notion.site/Careers-at-Caribou-357783b6007f4d15bae8c7b9651cebf5">hiring</a>!
+		</p>
 
-				<hr class="my-8" />
+		<hr class="my-8" />
 
-				<p>Here are some interesting links I'd like to share:</p>
+		<p>Here are some interesting links I'd like to share:</p>
 
-				<p><a href="https://www.reddit.com/r/technology/comments/85eri3/edward_snowden_facebook_is_a_surveillance_company/">Facebook is a surveillance company</a></p>
-				<p><a href="https://edge.org/response-detail/11783">Kayfabe</a></p>
-				<p><a href="http://www.thrivenotes.com/the-last-answer/">The Last Answer</a></p>
-				<p><a href="http://galactanet.com/oneoff/theegg_mod.html">The Egg</a></p>
-				<p><a href="http://paulgraham.com/love.html">Love</a></p>
-				<p><a href="http://www.paulgraham.com/avg.html">Beating the Averages</a></p>
-				<p><a href="http://www.thoughtcrime.org/blog/career-advice/">Career Advice</a></p>
-				<p><a href="http://sivers.org/kimo">There's No Speed Limit</a></p>
-				<p><a href="https://www.zerohedge.com/news/2018-01-23/american-system-not-capitalism">The American (and Canadian) System is not Capitalistic</a></p>
-				<p><a href="http://www.jasq.org/just-another-scala-quant/inverting-binary-trees-considered-harmful">On new age tech interview trends</a></p>
-				<p><a href="https://www.brainpickings.org/2015/10/13/john-steinbeck-letters-to-elizabeth-dream/?mc_cid=23a7c01a76&mc_eid=ec41677af4">The Death of Creative Culture</a></p>
-				<p><a href="https://www.commentarymagazine.com/articles/how-art-became-irrelevant/">The Importance of Art</a></p>
-				<p><a href="http://herpolhode.com/rob/utah2000.pdf">OS Research is Irrelevant</a></p>
-				<p><a href="http://paulgraham.com/newthings.html">New Things</a></p>
-				<p><a href="https://signalvnoise.com/posts/3972-reconsider">Reconsider</a></p>
-				<p><a href="https://alumni.stanford.edu/get/page/magazine/article/?article_id=32124">The Genius Within</a></p>
-				<p><a href="http://www.uky.edu/~eushe2/Pajares/jgospel.html">The Gospel of Relaxation</a></p>
-				<p><a href="http://www.wired.com/1996/12/ffglass/">Mother Earth Mother Board</a></p>
-				<p><a href="http://austenallred.com/growth-ha/">Growth Hacking is Dangerous</a></p>
-				<p><a href="http://genius.com/Tennessee-williams-the-catastrophe-of-success-annotated">The Catastrophe of Success</a></p>
-				<p><a href="http://www.gq.com/story/lsd-life-saving-drug">LSD: My Life-Saving Drug</a></p>
-				<p><a href="https://www.technologyreview.com/s/531911/isaac-asimov-asks-how-do-people-get-new-ideas/">How Do People Get New Ideas?</a></p>
-				<p><a href="http://www.nytimes.com/2015/12/15/your-money/your-most-valuable-asset-is-yourself.html?_r=1">The Most Valuable Asset</a></p>
-				<p><a href="https://fusiondotnet.files.wordpress.com/2015/06/iterating-grace_digitized_small.pdf">Iterating Grace</a></p>
-				<p><a href="http://web.archive.org/web/20080213082423/http://www.marginalia.org/dfw_kenyon_commencement.html">This Is Water</a></p>
-				<p><a href="http://sivers.org/book/PowerOfFullEngagement">Full Engagement</a></p>
-				<p><a href="http://www.skyhunter.com/marcs/GentleSeduction.html">The Gentle Seduction</a></p>
-				<p><a href="http://playbook.samaltman.com/">Startup Playbook</a></p>
-				<p><a href="http://aeon.co/magazine/society/james-somers-web-developer-money/">Are Coders Worth it?</a></p>
-				<p><a href="http://lesswrong.com/lw/hs/think_like_reality/">Think Like Reality</a></p>
-				<p><a href="http://www.gwern.net/Spaced%20repetition">On Information Retention</a></p>
-				<p><a href="http://www.wholeearth.com/index.php">The Whole Earth Catalog</a></p>
-				<p><a href="http://www.fourmilab.ch/etexts/www/barnum/moneygetting/moneygetting.html">Art Of Money Getting</a></p>
-				<p><a href="http://www.thoughtcrime.org/blog/the-worst/">The Worst</a></p>
-				<p><a href="http://nautil.us/issue/27/dark-matter/ingenious-nicholas-epley">Can we ever really know another person?</a></p>
-				<p><a href="http://norvig.com/21-days.html">Teach Yourself Programming in Ten Years</a></p>
-				<p><a href="http://www.gutenberg.org/files/2680/2680-h/2680-h.htm#link2H_INTR">Meditations, by Marcus Aurelius</a></p>
-				<p><a href="http://www.nickbostrom.com/fable/dragon.html">The Fable of the Dragon-Tyrant</a></p>
+		<p><a href="https://www.reddit.com/r/technology/comments/85eri3/edward_snowden_facebook_is_a_surveillance_company/">Facebook is a surveillance company</a></p>
+		<p><a href="https://edge.org/response-detail/11783">Kayfabe</a></p>
+		<p><a href="http://www.thrivenotes.com/the-last-answer/">The Last Answer</a></p>
+		<p><a href="http://galactanet.com/oneoff/theegg_mod.html">The Egg</a></p>
+		<p><a href="http://paulgraham.com/love.html">Love</a></p>
+		<p><a href="http://www.paulgraham.com/avg.html">Beating the Averages</a></p>
+		<p><a href="http://www.thoughtcrime.org/blog/career-advice/">Career Advice</a></p>
+		<p><a href="http://sivers.org/kimo">There's No Speed Limit</a></p>
+		<p><a href="https://www.zerohedge.com/news/2018-01-23/american-system-not-capitalism">The American (and Canadian) System is not Capitalistic</a></p>
+		<p><a href="http://www.jasq.org/just-another-scala-quant/inverting-binary-trees-considered-harmful">On new age tech interview trends</a></p>
+		<p><a href="https://www.brainpickings.org/2015/10/13/john-steinbeck-letters-to-elizabeth-dream/?mc_cid=23a7c01a76&mc_eid=ec41677af4">The Death of Creative Culture</a></p>
+		<p><a href="https://www.commentarymagazine.com/articles/how-art-became-irrelevant/">The Importance of Art</a></p>
+		<p><a href="http://herpolhode.com/rob/utah2000.pdf">OS Research is Irrelevant</a></p>
+		<p><a href="http://paulgraham.com/newthings.html">New Things</a></p>
+		<p><a href="https://signalvnoise.com/posts/3972-reconsider">Reconsider</a></p>
+		<p><a href="https://alumni.stanford.edu/get/page/magazine/article/?article_id=32124">The Genius Within</a></p>
+		<p><a href="http://www.uky.edu/~eushe2/Pajares/jgospel.html">The Gospel of Relaxation</a></p>
+		<p><a href="http://www.wired.com/1996/12/ffglass/">Mother Earth Mother Board</a></p>
+		<p><a href="http://austenallred.com/growth-ha/">Growth Hacking is Dangerous</a></p>
+		<p><a href="http://genius.com/Tennessee-williams-the-catastrophe-of-success-annotated">The Catastrophe of Success</a></p>
+		<p><a href="http://www.gq.com/story/lsd-life-saving-drug">LSD: My Life-Saving Drug</a></p>
+		<p><a href="https://www.technologyreview.com/s/531911/isaac-asimov-asks-how-do-people-get-new-ideas/">How Do People Get New Ideas?</a></p>
+		<p><a href="http://www.nytimes.com/2015/12/15/your-money/your-most-valuable-asset-is-yourself.html?_r=1">The Most Valuable Asset</a></p>
+		<p><a href="https://fusiondotnet.files.wordpress.com/2015/06/iterating-grace_digitized_small.pdf">Iterating Grace</a></p>
+		<p><a href="http://web.archive.org/web/20080213082423/http://www.marginalia.org/dfw_kenyon_commencement.html">This Is Water</a></p>
+		<p><a href="http://sivers.org/book/PowerOfFullEngagement">Full Engagement</a></p>
+		<p><a href="http://www.skyhunter.com/marcs/GentleSeduction.html">The Gentle Seduction</a></p>
+		<p><a href="http://playbook.samaltman.com/">Startup Playbook</a></p>
+		<p><a href="http://aeon.co/magazine/society/james-somers-web-developer-money/">Are Coders Worth it?</a></p>
+		<p><a href="http://lesswrong.com/lw/hs/think_like_reality/">Think Like Reality</a></p>
+		<p><a href="http://www.gwern.net/Spaced%20repetition">On Information Retention</a></p>
+		<p><a href="http://www.wholeearth.com/index.php">The Whole Earth Catalog</a></p>
+		<p><a href="http://www.fourmilab.ch/etexts/www/barnum/moneygetting/moneygetting.html">Art Of Money Getting</a></p>
+		<p><a href="http://www.thoughtcrime.org/blog/the-worst/">The Worst</a></p>
+		<p><a href="http://nautil.us/issue/27/dark-matter/ingenious-nicholas-epley">Can we ever really know another person?</a></p>
+		<p><a href="http://norvig.com/21-days.html">Teach Yourself Programming in Ten Years</a></p>
+		<p><a href="http://www.gutenberg.org/files/2680/2680-h/2680-h.htm#link2H_INTR">Meditations, by Marcus Aurelius</a></p>
+		<p><a href="http://www.nickbostrom.com/fable/dragon.html">The Fable of the Dragon-Tyrant</a></p>
 
-				<blockquote>
-					<p>
-						Just as there are odors that dogs can smell and we cannot, as well as sounds that dogs can hear and we cannot, so too there are wavelengths of light we cannot see and flavors we cannot taste. Why then, given our brains wired the way they are, does the remark, "Perhaps there are thoughts we cannot think," surprise you? - <a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004020">Richard Hamming</a>
-					</p>
-				</blockquote>
-			</div>
-		</main>
-		<Footer />
-	</body>
-</html>
+		<blockquote>
+			<p>
+				Just as there are odors that dogs can smell and we cannot, as well as sounds that dogs can hear and we cannot, so too there are wavelengths of light we cannot see and flavors we cannot taste. Why then, given our brains wired the way they are, does the remark, "Perhaps there are thoughts we cannot think," surprise you? - <a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004020">Richard Hamming</a>
+			</p>
+		</blockquote>
+	</div>
+</BaseLayout>

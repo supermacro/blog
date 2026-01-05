@@ -1,0 +1,42 @@
+---
+import BaseHead from '../components/BaseHead';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+import { SITE_TITLE } from '../consts';
+
+type Props = {
+	title: string;
+	description: string;
+};
+
+const { title, description } = Astro.props;
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
+const pageUrl = Astro.url.toString();
+const rssUrl = new URL('rss.xml', Astro.site).toString();
+const sitemapUrl = new URL('sitemap-index.xml', Astro.site).toString();
+const generator = Astro.generator;
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en" class="h-full">
+	<head>
+		<BaseHead
+			title={title}
+			description={description}
+			canonicalUrl={canonicalUrl}
+			pageUrl={pageUrl}
+			rssUrl={rssUrl}
+			sitemapUrl={sitemapUrl}
+			generator={generator}
+		/>
+	</head>
+	<body class="m-0 font-serif bg-white text-body text-base leading-normal min-h-full flex flex-col max-sm:text-[17px]">
+		<Header currentPath={currentPath} />
+		<main class="flex-1 w-full max-w-page mx-auto px-[15%] max-[1000px]:px-[10%] max-[630px]:px-[5%] max-[600px]:px-[2%]">
+			<slot />
+		</main>
+		<Footer />
+	</body>
+</html>

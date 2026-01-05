@@ -1,16 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseHead from '../components/BaseHead';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
-
-const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
-const pageUrl = Astro.url.toString();
-const rssUrl = new URL('rss.xml', Astro.site).toString();
-const sitemapUrl = new URL('sitemap-index.xml', Astro.site).toString();
-const generator = Astro.generator;
-const currentPath = Astro.url.pathname;
 
 const posts = (await getCollection('blog'))
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
@@ -27,38 +18,20 @@ const formatDate = (date: Date) => {
 };
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead
-			title={SITE_TITLE}
-			description={SITE_DESCRIPTION}
-			canonicalUrl={canonicalUrl}
-			pageUrl={pageUrl}
-			rssUrl={rssUrl}
-			sitemapUrl={sitemapUrl}
-			generator={generator}
-		/>
-	</head>
-	<body>
-		<Header currentPath={currentPath} />
-		<main>
-			<div class="latest-article">
-				<h3 class="text-sm opacity-75 font-sans mb-2">Latest Post:</h3>
-				<h2 class="article-title text-2xl mb-2">
-					<a href={`/blog/${latestPost.id}/`} class="text-heading hover:text-accent">
-						{latestPost.data.title}
-					</a>
-				</h2>
-				<div class="article-meta font-sans text-sm mb-4">
-					{formatDate(latestPost.data.pubDate)}
-				</div>
-				<p class="mb-4">{latestPost.data.description}</p>
-				<a href={`/blog/${latestPost.id}/`} class="italic border-b border-accent hover:text-accent">
-					Continue Reading ...
-				</a>
-			</div>
-		</main>
-		<Footer />
-	</body>
-</html>
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+	<div class="latest-article">
+		<h3 class="text-sm opacity-75 font-sans mb-2">Latest Post:</h3>
+		<h2 class="article-title text-2xl mb-2">
+			<a href={`/blog/${latestPost.id}/`} class="text-heading hover:text-accent">
+				{latestPost.data.title}
+			</a>
+		</h2>
+		<div class="article-meta font-sans text-sm mb-4">
+			{formatDate(latestPost.data.pubDate)}
+		</div>
+		<p class="mb-4">{latestPost.data.description}</p>
+		<a href={`/blog/${latestPost.id}/`} class="italic border-b border-accent hover:text-accent">
+			Continue Reading ...
+		</a>
+	</div>
+</BaseLayout>

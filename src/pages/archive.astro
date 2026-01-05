@@ -1,19 +1,11 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseHead from '../components/BaseHead';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
-const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
-const pageUrl = Astro.url.toString();
-const rssUrl = new URL('rss.xml', Astro.site).toString();
-const sitemapUrl = new URL('sitemap-index.xml', Astro.site).toString();
-const generator = Astro.generator;
-const currentPath = Astro.url.pathname;
 
 // Format date like "Jan 8, 2022"
 const formatDate = (date: Date) => {
@@ -25,34 +17,16 @@ const formatDate = (date: Date) => {
 };
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead
-			title={`Archives | ${SITE_TITLE}`}
-			description={SITE_DESCRIPTION}
-			canonicalUrl={canonicalUrl}
-			pageUrl={pageUrl}
-			rssUrl={rssUrl}
-			sitemapUrl={sitemapUrl}
-			generator={generator}
-		/>
-	</head>
-	<body>
-		<Header currentPath={currentPath} />
-		<main>
-			<h2 class="archive-heading text-center w-1/2 mx-auto mb-8">All Posts</h2>
-			<ul class="p-0">
-				{posts.map((post) => (
-					<li class="list-none mb-6">
-						<a href={`/blog/${post.id}/`} class="hover:text-red-600">
-							<div class="font-sans text-sm">{post.data.title}</div>
-							<div class="font-sans text-sm text-muted">{formatDate(post.data.pubDate)}</div>
-						</a>
-					</li>
-				))}
-			</ul>
-		</main>
-		<Footer />
-	</body>
-</html>
+<BaseLayout title={`Archives | ${SITE_TITLE}`} description={SITE_DESCRIPTION}>
+	<h2 class="archive-heading text-center w-1/2 mx-auto mb-8">All Posts</h2>
+	<ul class="p-0">
+		{posts.map((post) => (
+			<li class="list-none mb-6">
+				<a href={`/blog/${post.id}/`} class="hover:text-red-600">
+					<div class="font-sans text-sm">{post.data.title}</div>
+					<div class="font-sans text-sm text-muted">{formatDate(post.data.pubDate)}</div>
+				</a>
+			</li>
+		))}
+	</ul>
+</BaseLayout>

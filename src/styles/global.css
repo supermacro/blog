@@ -5,175 +5,96 @@
 /* Google Fonts are loaded via BaseHead component */
 
 @layer base {
-	html {
-		box-sizing: border-box;
-		height: 100%;
-	}
-
 	*, *:before, *:after {
-		box-sizing: inherit;
-	}
-
-	body {
-		margin: 0;
-		font-family: theme('fontFamily.serif');
-		background-color: #fff;
-		color: theme('colors.body');
-		font-size: 16px;
-		line-height: 1.5;
-		min-height: 100%;
-		display: flex;
-		flex-direction: column;
-	}
-
-	@media (max-width: 600px) {
-		body {
-			font-size: 17px;
-		}
-	}
-
-	main {
-		flex: 1;
-		width: 100%;
-		max-width: theme('maxWidth.page');
-		margin: 0 auto;
-		padding: 0 15%;
-	}
-
-	@media (max-width: 1000px) {
-		main {
-			padding: 0 10%;
-		}
-	}
-
-	@media (max-width: 630px) {
-		main {
-			padding: 0 5%;
-		}
-	}
-
-	@media (max-width: 600px) {
-		main {
-			padding: 0 2%;
-		}
+		box-sizing: border-box;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		font-family: theme('fontFamily.sans');
-		color: theme('colors.heading');
-		margin: 0 0 0.5rem 0;
-		line-height: 1.3;
-		font-weight: 600;
+		@apply font-sans text-heading m-0 mb-2 leading-tight font-semibold;
 	}
 
 	h1 {
-		font-size: 2rem;
+		@apply text-[2rem];
 	}
 
 	h2 {
-		font-size: 1.5rem;
+		@apply text-2xl;
 	}
 
 	h3 {
-		font-size: 1.25rem;
+		@apply text-xl;
 	}
 
 	p, ul, ol {
-		line-height: 1.5em;
-		font-family: theme('fontFamily.serif');
+		@apply leading-normal font-serif;
 	}
 
 	a {
-		text-decoration: none;
-		color: #000;
+		@apply no-underline text-black;
 	}
 
 	/* Content links get the purple underline */
 	.prose a {
-		border-bottom: 1px solid theme('colors.accent');
+		@apply border-b border-accent;
 	}
 
 	.prose a:hover {
-		color: theme('colors.accent');
+		@apply text-accent;
 	}
 
 	strong, b {
-		font-weight: 700;
+		@apply font-bold;
 	}
 
 	p {
-		margin-bottom: 1em;
+		@apply mb-4;
 	}
 
 	img {
-		max-width: 100%;
-		height: auto;
+		@apply max-w-full h-auto;
 	}
 
 	code {
-		background-color: theme('colors.code-bg');
-		padding: 0.2em;
-		border-radius: 2px;
-		color: theme('colors.code-text');
-		font-size: 0.9em;
+		@apply bg-code-bg py-[0.2em] px-[0.2em] rounded-sm text-code-text text-[0.9em];
 	}
 
 	pre {
-		background-color: theme('colors.pre-bg');
-		padding: 10px;
-		border-radius: 5px;
-		overflow-x: auto;
-		font-size: 0.8rem;
+		@apply bg-pre-bg p-2.5 rounded overflow-x-auto text-[0.8rem];
 	}
 
 	pre > code {
-		padding: 0;
-		background: transparent;
-		color: inherit;
+		@apply p-0 bg-transparent text-inherit;
 	}
 
 	blockquote {
-		border-left: 5px solid theme('colors.accent');
-		margin-left: 0;
-		padding-left: 2em;
+		@apply border-l-[5px] border-accent ml-0 pl-8;
 	}
 
 	blockquote p {
-		font-style: italic;
-		opacity: 0.7;
+		@apply italic opacity-70;
 	}
 
 	/* Only apply list styles to prose content, not navigation */
 	.prose ul li {
-		list-style-type: circle;
+		@apply list-[circle];
 	}
 
 	.prose ul li:not(:first-child) {
-		margin-top: 1em;
+		@apply mt-4;
 	}
 
 	hr {
-		border: 0;
-		height: 1px;
-		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+		@apply border-0 h-px bg-gradient-to-r from-transparent via-black/75 to-transparent;
 	}
 }
 
 @layer components {
 	/* Tag link styling */
 	.tag-link {
-		font-size: 80%;
-		font-family: theme('fontFamily.sans');
-		font-weight: bold;
-		border: 1px solid theme('colors.border');
-		border-radius: 2px;
-		padding: 0.2em 0.8em;
-		color: theme('colors.muted');
-		transition: border 0.2s, color 0.2s;
+		@apply text-[80%] font-sans font-bold border border-border rounded-sm py-[0.2em] px-[0.8em] text-muted transition-[border,color] duration-200;
 	}
 
 	.tag-link:hover {
-		border-color: theme('colors.accent');
-		color: theme('colors.accent');
+		@apply border-accent text-accent;
 	}
 }

@@ -24,7 +24,7 @@ const formatDate = (date: Date) => {
 };
 ---
 
-<html lang="en">
+<html lang="en" class="h-full">
 	<head>
 		<BaseHead
 			title={title}
@@ -38,9 +38,9 @@ const formatDate = (date: Date) => {
 		/>
 	</head>
 
-	<body>
+	<body class="m-0 font-serif bg-white text-body text-base leading-normal min-h-full flex flex-col max-sm:text-[17px]">
 		<Header currentPath={currentPath} />
-		<main>
+		<main class="flex-1 w-full max-w-page mx-auto px-[15%] max-[1000px]:px-[10%] max-[630px]:px-[5%] max-[600px]:px-[2%]">
 			<article class="article-container">
 				<h2 id="title" class="text-center font-serif text-3xl mt-16 scroll-mt-20">{title}</h2>
 				<div class="article-date text-center font-sans mb-3">
