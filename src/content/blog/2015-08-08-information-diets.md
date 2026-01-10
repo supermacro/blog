@@ -20,8 +20,7 @@ Shouldn't this same ideology apply to our mindsets?
 
 I believe it's one's own responsibility to ensure a healthy mind full of
 amazing and healthy thoughts. Like I mentioned before, [your mind is an
-input/output machine]({filename}2015-3-31-Your-Mind-Is-An-Input--Output-
-Machine ).
+input/output machine](/blog/2015-03-31-your-mind-is-an-input-output-machine/).
 
 
 

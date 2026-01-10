@@ -32,7 +32,7 @@ tags: ["software"]
 
 ## Background
 
-In my [last blog post]({filename}2018-10-06-overengineered.md), I mentioned how I had been thinking about adding a comment system to my blog. Since this is a static website, I do not have a server available to create an endpoint to handle comments.
+In my [last blog post](/blog/2018-10-06-my-over-engineered-blogging-setup/), I mentioned how I had been thinking about adding a comment system to my blog. Since this is a static website, I do not have a server available to create an endpoint to handle comments.
 
 > For context, a comment system is a service that hosts comments for you. Comment systems are valuable to websites because they encourage engagement with your content and increase user retention.
 

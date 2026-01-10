@@ -1,12 +1,12 @@
 ---
 title: "What Happened to the Laurier Entrepreneur"
-description: "I'm beyond the halfway point of my [self development challenge]({filename}2014-12-26-Self-Development-Challenge) and through my experience as a covert Laurier student taking a Uni…"
+description: "I'm beyond the halfway point of my [self development challenge](/blog/2014-12-26-self-development-challenge/) and through my experience as a covert Laurier student taking a Uni…"
 pubDate: "2015-03-02"
 tags: ["posts"]
 ---
 
 I'm beyond the halfway point of my [self development
-challenge]({filename}2014-12-26-Self-Development-Challenge) and through my
+challenge](/blog/2014-12-26-self-development-challenge/) and through my
 experience as a covert Laurier student taking a University of Waterloo class,
 I've noticed some big differences that may contribute to the two institutions'
 large chasm in entrepreneurial ability.

@@ -7,7 +7,7 @@ tags: ["software"]
 
 *This post assumes familiarity with TypeScript.*
 
-In my [previous post]({filename}2019-04-29-neverthrow.md), I introduced a [npm package](https://www.npmjs.com/package/neverthrow) to model failure at the type level.
+In my [previous post](/blog/2019-04-29-type-safe-error-handling-in-typescript/), I introduced a [npm package](https://www.npmjs.com/package/neverthrow) to model failure at the type level.
 
 If you're not familiar with `neverthrow`, here's a quick rundown (feel free to skip this tiny intro by [clicking here](#main-content)):
 
@@ -58,7 +58,7 @@ if (myResult.isErr()) {
 }
 ```
 
-This quick rundown doesn't do the package justice, so I highly recommend you check out my [previous post]({filename}2019-04-29-neverthrow.md) that really walks you through the package.
+This quick rundown doesn't do the package justice, so I highly recommend you check out my [previous post](/blog/2019-04-29-type-safe-error-handling-in-typescript/) that really walks you through the package.
 
 ---
 

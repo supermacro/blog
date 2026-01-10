@@ -5,7 +5,7 @@ pubDate: "2019-03-08"
 tags: ["software"]
 ---
 
-Link to [Part 1]({filename}2018-12-28-parlez-pt1.md)
+Link to [Part 1](/blog/2018-12-28-parlez-vous-anglais-part-1/)
 
 ---
 
