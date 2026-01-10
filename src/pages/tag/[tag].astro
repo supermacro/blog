@@ -41,6 +41,11 @@ const formatDate = (date: Date) => {
 	<p class="text-muted mb-8">
 		<a href="/archive" class="border-b border-accent hover:text-accent">&larr; Back to all posts</a>
 	</p>
+	{tag === 'forty-eight' && (
+		<p class="mb-8 leading-relaxed">
+			For the four months between January and April 2014, I challenged myself to write a blog post (about anything) every 48 hours. This proved to be one of the most creative times in my life, and set the trajectory for my life as a entrepreneur, software developer, and curious geek. Below is the full, mainly unedited, set of blog posts.
+		</p>
+	)}
 	<ul class="p-0">
 		{posts.map((post) => (
 			<li class="list-none mb-4">
