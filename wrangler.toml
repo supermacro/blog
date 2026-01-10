@@ -1,5 +1,5 @@
-name = "engineering-notebook-static"
-compatibility_date = "2025-10-06"
+name = "gdelgado-personal-site"
+compatibility_date = "2026-01-09"
 
 [assets]
 directory = "./dist"
