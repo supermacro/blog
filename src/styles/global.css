@@ -59,11 +59,43 @@
 	}
 
 	pre {
-		@apply bg-pre-bg p-2.5 rounded overflow-x-auto text-[0.8rem];
+		@apply mb-6 bg-pre-bg p-2.5 rounded overflow-x-auto text-[0.8rem];
 	}
 
 	pre > code {
 		@apply p-0 bg-transparent text-inherit;
+	}
+
+	.astro-code .line {
+		display: block;
+		min-height: 1lh;
+	}
+
+	.astro-code.has-line-numbers {
+		@apply pl-0;
+	}
+
+	.astro-code.has-line-numbers code {
+		counter-reset: code-line;
+	}
+
+	.astro-code.has-line-numbers .line {
+		counter-increment: code-line;
+	}
+
+	.astro-code.has-line-numbers .line::before {
+		content: counter(code-line);
+		display: inline-block;
+		width: 2.75rem;
+		padding-right: 1rem;
+		color: rgb(229 231 235 / 55%);
+		font-family: theme('fontFamily.mono');
+		text-align: right;
+		user-select: none;
+	}
+
+	.astro-code.has-line-numbers .line::before::selection {
+		background: transparent;
 	}
 
 	blockquote {
@@ -84,7 +116,7 @@
 	}
 
 	hr {
-		@apply border-0 h-px bg-gradient-to-r from-transparent via-black/75 to-transparent;
+		@apply my-10 border-0 border-t border-dashed border-black/60 bg-transparent;
 	}
 }
 

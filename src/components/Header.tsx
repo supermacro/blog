@@ -1,12 +1,16 @@
+import type { ReactNode } from 'react';
 import { SITE_TITLE } from '../consts';
 import HeaderLink from './HeaderLink';
 
 type HeaderProps = {
 	currentPath: string;
+	children?: ReactNode;
 };
 
-const Header = ({ currentPath }: HeaderProps) => (
-	<header className="py-8">
+const Header = ({ currentPath, children }: HeaderProps) => (
+	<header>
+		{children}
+
 		<div className="flex justify-center">
 			<a href="/" className="text-heading transition-colors duration-200 hover:text-accent">
 				<h1 className="text-center text-3xl italic font-normal">{SITE_TITLE}</h1>

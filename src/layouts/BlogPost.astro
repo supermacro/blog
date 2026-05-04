@@ -2,6 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead';
 import Footer from '../components/Footer';
+import GrayScottBar from '../components/GrayScottBar.astro';
 import Header from '../components/Header';
 
 type Props = CollectionEntry<'blog'>['data'];
@@ -39,7 +40,9 @@ const formatDate = (date: Date) => {
 	</head>
 
 	<body class="m-0 font-serif bg-white text-body text-base leading-normal min-h-full flex flex-col max-sm:text-[17px]">
-		<Header currentPath={currentPath} />
+		<Header currentPath={currentPath}>
+			<GrayScottBar />
+		</Header>
 		<main class="flex-1 w-full max-w-4xl mx-auto px-6 max-[768px]:px-4">
 			<article class="article-container">
 				<h2 id="title" class="text-center font-serif text-3xl mt-16 scroll-mt-20">{title}</h2>
