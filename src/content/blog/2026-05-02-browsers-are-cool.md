@@ -27,6 +27,8 @@ Also this:
 
 CH1 was fun! By the end of the chapter I was already rendering simple html pages, albeit crudely!
 
+> All code is here: https://github.com/supermacro/netview/
+
 And all it took to implement simple rendering was this:
 
 ```python lineNumbers
