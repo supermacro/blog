@@ -8,6 +8,7 @@ const FormattedDate = ({ date }: FormattedDateProps) => {
 		year: 'numeric',
 		month: 'short',
 		day: 'numeric',
+		timeZone: 'UTC',
 	});
 
 	return <time dateTime={iso}>{readable}</time>;

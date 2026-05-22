@@ -106,9 +106,46 @@
 		@apply italic opacity-70;
 	}
 
+	.prose blockquote.twitter-tweet,
+	.prose .twitter-tweet-rendered {
+		@apply mx-auto;
+	}
+
+	.prose blockquote.twitter-tweet {
+		@apply border-0 pl-0;
+	}
+
+	.prose .twitter-tweet-rendered {
+		display: block !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+
+	.prose .twitter-tweet-rendered iframe {
+		display: block !important;
+		width: 100% !important;
+	}
+
 	/* Only apply list styles to prose content, not navigation */
+	.prose ul {
+		@apply mb-8 pl-0;
+	}
+
 	.prose ul li {
-		@apply list-[circle];
+		@apply relative list-none pl-6;
+	}
+
+	.prose ul li::before {
+		content: '';
+		position: absolute;
+		left: 0.1rem;
+		top: 0.72em;
+		width: 0.5rem;
+		height: 0.5rem;
+		border-top: 2px solid theme('colors.heading');
+		border-right: 2px solid theme('colors.heading');
+		box-shadow: 0.16rem -0.16rem 0 rgb(142 125 254 / 28%);
+		transform: translateY(-50%) rotate(45deg);
 	}
 
 	.prose ul li:not(:first-child) {
